@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Bot, Brain, Calendar, Clock, MessageSquare, TrendingUp } from "lucide-react"
+import SectionDivider from "./SectionDivider"
 
 const features = [
   {
@@ -44,7 +45,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-24 bg-white relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -133,6 +134,9 @@ export default function Features() {
           </div>
         </motion.div>
       </div>
+      
+      {/* Section divider */}
+      <SectionDivider type="curve" color="#F9FAFB" />
     </section>
   )
 }

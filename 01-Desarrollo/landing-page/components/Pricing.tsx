@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Check, X, Star, TrendingUp, Clock } from "lucide-react"
+import SectionDivider from "./SectionDivider"
 
 const allFeatures = [
   { id: "patients", label: "Pacientes activos" },
@@ -91,8 +92,12 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="pricing" className="py-24 bg-gradient-to-br from-white via-primary/5 to-white relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -257,6 +262,9 @@ export default function Pricing() {
           </p>
         </motion.div>
       </div>
+      
+      {/* Section dividers */}
+      <SectionDivider type="wave-smooth" color="#F9FAFB" />
     </section>
   )
 }
