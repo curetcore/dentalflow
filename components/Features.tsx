@@ -1,0 +1,136 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { Bot, Brain, Calendar, Clock, MessageSquare, TrendingUp } from "lucide-react"
+
+const features = [
+  {
+    icon: Bot,
+    title: "Confirma citas 24/7",
+    description: "María nunca duerme. Confirma y reagenda automáticamente por WhatsApp",
+    color: "text-primary"
+  },
+  {
+    icon: Brain,
+    title: "Predice ausencias con 93% precisión",
+    description: "IA que aprende de cada paciente y anticipa no-shows",
+    color: "text-secondary"
+  },
+  {
+    icon: TrendingUp,
+    title: "Aumenta ingresos +40%",
+    description: "Llena espacios cancelados instantáneamente",
+    color: "text-accent"
+  },
+  {
+    icon: MessageSquare,
+    title: "Respuestas personalizadas",
+    description: "Cada mensaje se adapta al historial del paciente",
+    color: "text-primary"
+  },
+  {
+    icon: Calendar,
+    title: "Integración total",
+    description: "Conecta con tu sistema de citas actual sin cambios",
+    color: "text-secondary"
+  },
+  {
+    icon: Clock,
+    title: "ROI en 30 días",
+    description: "Resultados medibles desde el primer mes",
+    color: "text-accent"
+  }
+]
+
+export default function Features() {
+  return (
+    <section id="features" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            María AI hace el trabajo pesado
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Mientras tú atiendes pacientes, María gestiona toda la comunicación y optimiza tu agenda
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all"
+            >
+              <feature.icon className={`w-12 h-12 ${feature.color} mb-4`} />
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Demo section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-20 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12"
+        >
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Ve a María en acción
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Descubre cómo María transforma la experiencia de tus pacientes y optimiza tu clínica
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span>Demo personalizada de 15 minutos</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span>Casos reales de clínicas en RD</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                    <span className="text-white text-xs">✓</span>
+                  </div>
+                  <span>Cálculo de ROI para tu clínica</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-xl p-6">
+              <div className="aspect-video bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center cursor-pointer"
+                >
+                  <div className="w-0 h-0 border-l-[20px] border-l-primary border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-2" />
+                </motion.div>
+              </div>
+              <p className="text-center text-gray-600">Click para ver demo interactiva</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
