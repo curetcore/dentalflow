@@ -1,4 +1,4 @@
-import NavbarNew from '@/components/NavbarNew'
+import NavbarWithLogin from '@/components/NavbarWithLogin'
 import HeroImproved from '@/components/HeroImproved'
 import FeaturesImproved from '@/components/FeaturesImproved'
 import TestimonialsNew from '@/components/TestimonialsNew'
@@ -9,7 +9,7 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <NavbarNew />
+      <NavbarWithLogin />
       <HeroImproved />
       <FeaturesImproved />
       <TestimonialsNew />

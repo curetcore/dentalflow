@@ -11,6 +11,8 @@ interface Translations {
     pricing: string
     demo: string
     startTrial: string
+    login: string
+    dashboard: string
   }
   hero: {
     badge: string
@@ -106,7 +108,9 @@ const translations: Record<Language, Translations> = {
       testimonials: "Testimonios",
       pricing: "Precios",
       demo: "Demo",
-      startTrial: "Prueba Gratis"
+      startTrial: "Prueba Gratis",
+      login: "Iniciar Sesión",
+      dashboard: "Dashboard"
     },
     hero: {
       badge: "#1 Asistente IA para Clínicas Dentales",
@@ -200,7 +204,9 @@ const translations: Record<Language, Translations> = {
       testimonials: "Testimonials", 
       pricing: "Pricing",
       demo: "Demo",
-      startTrial: "Start Free Trial"
+      startTrial: "Start Free Trial",
+      login: "Login",
+      dashboard: "Dashboard"
     },
     hero: {
       badge: "#1 AI Assistant for Dental Clinics",
