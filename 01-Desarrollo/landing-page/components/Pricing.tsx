@@ -93,8 +93,8 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-24 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -104,18 +104,18 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse border border-white/30">
+          <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
             <Clock className="w-4 h-4" />
             Oferta termina en 48 horas
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Planes que se adaptan a tu clínica
           </h2>
-          <p className="text-xl md:text-2xl text-green-100 mb-4">
+          <p className="text-xl md:text-2xl text-gray-600 mb-4">
             Elige el plan ideal según el tamaño de tu práctica
           </p>
-          <p className="text-lg text-green-200">
+          <p className="text-lg text-gray-500">
             Con DentalFlow recuperas esos pacientes desde el día 1
           </p>
         </motion.div>
@@ -129,10 +129,10 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden ${
+              className={`relative bg-white rounded-2xl overflow-hidden ${
                 plan.featured 
-                  ? 'ring-4 ring-white ring-offset-4 ring-offset-[#10B981] shadow-2xl scale-105' 
-                  : 'shadow-lg hover:shadow-xl hover:bg-white'
+                  ? 'ring-4 ring-primary ring-offset-4 shadow-2xl scale-105' 
+                  : 'shadow-lg hover:shadow-xl'
               }`}
             >
               {plan.featured && (

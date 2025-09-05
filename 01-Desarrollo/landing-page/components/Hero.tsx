@@ -10,12 +10,12 @@ export default function Hero() {
   const [showDemo, setShowDemo] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-mint/10 to-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute -top-4 -right-4 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -26,13 +26,13 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Menos pacientes
-              <span className="block bg-gradient-to-r from-primary to-mint bg-clip-text text-transparent">ausentes</span>
+              <span className="block text-[#06B6D4]">ausentes</span>
               más citas confirmadas
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
               Sistema automático de confirmación de citas por WhatsApp que mejora significativamente la asistencia de pacientes
             </p>
 
@@ -59,17 +59,17 @@ export default function Hero() {
 
             {/* Feature badges */}
             <div className="flex flex-wrap gap-3">
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <MessageCircle className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">WhatsApp Automático</span>
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
+                <MessageCircle className="w-5 h-5 text-white" />
+                <span className="text-sm font-medium text-white">WhatsApp Automático</span>
               </div>
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <Calendar className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-medium">Confirmación Automática</span>
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
+                <Calendar className="w-5 h-5 text-white" />
+                <span className="text-sm font-medium text-white">Confirmación Automática</span>
               </div>
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <TrendingUp className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">Recordatorios Inteligentes</span>
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
+                <TrendingUp className="w-5 h-5 text-white" />
+                <span className="text-sm font-medium text-white">Recordatorios Inteligentes</span>
               </div>
             </div>
           </motion.div>

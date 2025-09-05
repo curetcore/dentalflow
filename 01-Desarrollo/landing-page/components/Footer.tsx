@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-12 relative text-white/90">
+    <footer className="py-12 relative text-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -13,18 +13,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Producto</h4>
             <ul className="space-y-2">
-              <li><a href="#features" className="hover:text-white transition">Características</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">Precios</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition">Casos de éxito</a></li>
+              <li><a href="#features" className="hover:text-cyan-300 transition">Características</a></li>
+              <li><a href="#pricing" className="hover:text-cyan-300 transition">Precios</a></li>
+              <li><a href="#testimonials" className="hover:text-cyan-300 transition">Casos de éxito</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-white font-semibold mb-4">Soporte</h4>
             <ul className="space-y-2">
-              <li><a href="/docs" className="hover:text-white transition">Documentación</a></li>
-              <li><a href="/faq" className="hover:text-white transition">Preguntas frecuentes</a></li>
-              <li><a href="/contact" className="hover:text-white transition">Contacto</a></li>
+              <li><a href="/docs" className="hover:text-cyan-300 transition">Documentación</a></li>
+              <li><a href="/faq" className="hover:text-cyan-300 transition">Preguntas frecuentes</a></li>
+              <li><a href="/contact" className="hover:text-cyan-300 transition">Contacto</a></li>
             </ul>
           </div>
           
@@ -43,8 +43,8 @@ export default function Footer() {
             © 2024 DentalFlow AI. Todos los derechos reservados.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="/privacy" className="text-sm hover:text-white transition">Privacidad</a>
-            <a href="/terms" className="text-sm hover:text-white transition">Términos</a>
+            <a href="/privacy" className="text-sm hover:text-cyan-300 transition">Privacidad</a>
+            <a href="/terms" className="text-sm hover:text-cyan-300 transition">Términos</a>
           </div>
         </div>
       </div>

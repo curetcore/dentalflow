@@ -53,10 +53,10 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
             Automatización inteligente dental
           </h2>
-          <p className="text-xl md:text-2xl text-blue-100">
+          <p className="text-xl md:text-2xl text-gray-600">
             Mientras tú atiendes pacientes, el sistema gestiona toda la comunicación y optimiza tu agenda
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export default function Features() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl hover:bg-white transition-all duration-300 h-full flex flex-col"
+              className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-gray-100"
             >
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6">
                 <feature.icon className={`w-8 h-8 ${feature.color}`} />
@@ -87,14 +87,14 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-24 bg-white/10 backdrop-blur-sm rounded-3xl p-10 md:p-16 max-w-6xl mx-auto border border-white/20"
+          className="mt-24 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 md:p-16 max-w-6xl mx-auto"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                 Ve el sistema en acción
               </h3>
-              <p className="text-blue-100 mb-6">
+              <p className="text-gray-700 mb-6">
                 Descubre cómo la automatización transforma la experiencia de tus pacientes y optimiza tu clínica
               </p>
               <ul className="space-y-3">
@@ -102,19 +102,19 @@ export default function Features() {
                   <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
                     <span className="text-white text-xs">✓</span>
                   </div>
-                  <span className="text-white">Demo personalizada de 15 minutos</span>
+                  <span className="text-gray-800">Demo personalizada de 15 minutos</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
                     <span className="text-white text-xs">✓</span>
                   </div>
-                  <span className="text-white">Casos reales de clínicas en RD</span>
+                  <span className="text-gray-800">Casos reales de clínicas en RD</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
                     <span className="text-white text-xs">✓</span>
                   </div>
-                  <span className="text-white">Cálculo de ROI para tu clínica</span>
+                  <span className="text-gray-800">Cálculo de ROI para tu clínica</span>
                 </li>
               </ul>
             </div>
