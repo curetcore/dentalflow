@@ -91,7 +91,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="pb-24 bg-gray-50 relative overflow-hidden">
+    <section id="pricing" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />

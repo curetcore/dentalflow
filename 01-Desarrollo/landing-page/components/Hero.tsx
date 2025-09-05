@@ -9,9 +9,7 @@ export default function Hero() {
   const [showDemo, setShowDemo] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
-      {/* Modern gradient background */}
-      <div className="absolute inset-0 bg-white" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24 bg-gradient-to-b from-white to-gray-50">
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">

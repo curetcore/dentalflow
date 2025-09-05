@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, CheckCircle } from "lucide-react"
 
 export default function CTA() {
   return (
-    <section className="pb-20 bg-primary relative overflow-hidden">
+    <section className="py-20 bg-primary relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl" />
