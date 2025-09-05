@@ -6,7 +6,6 @@ import Pricing from '@/components/Pricing'
 import PricingComparison from '@/components/PricingComparison'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
-import WaveDivider from '@/components/WaveDivider'
 
 export default function Home() {
   return (
@@ -14,45 +13,38 @@ export default function Home() {
       <NavbarNew />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-blue-500 pb-0">
+      <section className="bg-gradient-to-b from-blue-50 to-blue-500">
         <Hero />
       </section>
       
       {/* Features */}
-      <section className="bg-white pt-0">
-        <WaveDivider className="text-blue-500 -mb-1" />
+      <section className="bg-white">
         <Features />
       </section>
       
       {/* Testimonials/Metrics */}
-      <section className="bg-gray-50 pt-0">
-        <WaveDivider className="text-white -mb-1" />
+      <section className="bg-gray-50">
         <Testimonials />
       </section>
       
       {/* Pricing */}
-      <section className="bg-white pt-0">
-        <WaveDivider className="text-gray-50 -mb-1" />
+      <section className="bg-white">
         <Pricing />
       </section>
       
       {/* Pricing Comparison */}
-      <section className="bg-white">
+      <section className="bg-gray-50">
         <PricingComparison />
       </section>
       
       {/* CTA Final */}
-      <section className="bg-blue-500 pt-0">
-        <WaveDivider className="text-white -mb-1" />
+      <section className="bg-blue-500 text-white">
         <CTA />
       </section>
       
       {/* Footer */}
-      <section className="bg-gray-900 pt-0">
-        <WaveDivider className="text-blue-500 -mb-1" />
-        <div className="text-white">
-          <Footer />
-        </div>
+      <section className="bg-gray-900 text-white">
+        <Footer />
       </section>
     </main>
   )
