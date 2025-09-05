@@ -47,7 +47,35 @@
       transform: translateY(-20px);
     }
   }
-
+  
+  /* Animación de onda para divisores */
+  @keyframes wave {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-20px);
+    }
+  }
+  
+  .animate-wave {
+    animation: wave 10s ease-in-out infinite;
+  }
+  
+  /* Animación de flujo para divisores */
+  @keyframes flow {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-flow {
+    animation: flow 20s linear infinite;
+  }
+  
   .bg-grid-pattern {
     background-image: 
       linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
@@ -77,5 +105,37 @@
   
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #0086CC;
+  }
+  
+  /* Efecto de brillo para divisores */
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine-effect::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
   }
 }
