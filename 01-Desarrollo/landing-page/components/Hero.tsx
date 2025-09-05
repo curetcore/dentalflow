@@ -1,18 +1,23 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, Calendar, TrendingUp } from "lucide-react"
+import { MessageCircle, Calendar, TrendingUp, ArrowRight, CheckCircle } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 export default function Hero() {
   const [showDemo, setShowDemo] = useState(false)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden">
-      {/* Animated background circles */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
+      {/* Modern gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50" />
+      
+      {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/10 animate-float" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-secondary/10 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-emerald-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-bl from-indigo-400 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -23,23 +28,25 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              María AI
-              <span className="block text-primary">Tu Asistente Dental Inteligente</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Transform Your
+              <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dental Practice</span>
+              with AI Assistant
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8">
-              Reduce ausencias <span className="font-bold text-secondary">73%</span> y llena tu agenda automáticamente
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+              Reduce no-shows by <span className="font-bold text-secondary">73%</span> and maximize your schedule with intelligent automation
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-primary/90 transition"
+                className="group bg-gradient-to-r from-primary to-primary/90 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center"
                 onClick={() => setShowDemo(true)}
               >
-                Prueba 14 días GRATIS
+                Start Free 14-Day Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
               <motion.a

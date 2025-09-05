@@ -1,6 +1,7 @@
-import Hero from '@/components/Hero'
-import Features from '@/components/Features'
-import Testimonials from '@/components/Testimonials'
+import Navbar from '@/components/Navbar'
+import HeroNew from '@/components/HeroNew'
+import FeaturesNew from '@/components/FeaturesNew'
+import TestimonialsNew from '@/components/TestimonialsNew'
 import Pricing from '@/components/Pricing'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
@@ -8,9 +9,10 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
-      <Features />
-      <Testimonials />
+      <Navbar />
+      <HeroNew />
+      <FeaturesNew />
+      <TestimonialsNew />
       <Pricing />
       <CTA />
       <Footer />
