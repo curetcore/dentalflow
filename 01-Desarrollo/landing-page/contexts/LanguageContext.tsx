@@ -143,11 +143,11 @@ const translations: Record<Language, Translations> = {
       dashboard: "Dashboard"
     },
     hero: {
-      badge: "#1 Asistente IA para Clínicas Dentales",
-      title1: "Reduce las Ausencias un",
-      title2: "73%",
-      title3: "con Automatización Inteligente",
-      subtitle: "DentalFlow AI confirma citas automáticamente, predice cancelaciones y llena los espacios en tu agenda - todo mediante conversaciones inteligentes por WhatsApp.",
+      badge: "La IA que Elimina las Pérdidas por Citas Olvidadas",
+      title1: "Cada ausencia te cuesta",
+      title2: "RD$2,500",
+      title3: "María las reduce un 73%",
+      subtitle: "Las secretarias pierden 3 horas diarias confirmando citas. Los pacientes olvidan sus citas. Tu clínica pierde RD$150,000 al mes. María resuelve todo esto con automatización inteligente por WhatsApp.",
       emailPlaceholder: "Ingresa tu email corporativo",
       stats: {
         clinics: "Clínicas Activas",
@@ -161,20 +161,20 @@ const translations: Record<Language, Translations> = {
       }
     },
     features: {
-      title1: "Todo lo que Necesitas para",
-      title2: "Transformar tu Práctica",
-      subtitle: "DentalFlow AI maneja todo el ciclo de comunicación con pacientes, para que puedas enfocarte en brindar excelente atención dental.",
+      title1: "Los Problemas que Cuestan Dinero",
+      title2: "Y Cómo los Resolvemos",
+      subtitle: "Cada problema no resuelto significa pérdidas. Identificamos los 12 principales dolores de las clínicas dentales y creamos soluciones automáticas para cada uno.",
       assistant: {
-        title: "Asistente IA 24/7",
-        description: "María nunca duerme. Confirma y reagenda citas automáticamente vía WhatsApp, SMS o email."
+        title: "Citas Olvidadas = Dinero Perdido",
+        description: "30% de pacientes olvidan sus citas. María envía recordatorios automáticos 24h y 3h antes. Resultado: -73% ausencias, +RD$150,000/mes recuperados."
       },
       analytics: {
-        title: "Análisis Predictivo",
-        description: "93% de precisión prediciendo ausencias. La IA aprende de los patrones de comportamiento de cada paciente."
+        title: "Llamadas Perdidas = Pacientes Perdidos",
+        description: "Cada llamada sin responder es un paciente que va a la competencia. María responde automáticamente en WhatsApp con opción de agendar inmediata."
       },
       revenue: {
-        title: "Optimización de Ingresos",
-        description: "Llena automáticamente espacios cancelados. Incremento promedio del 40% en ingresos en los primeros 3 meses."
+        title: "Secretarias Sobrecargadas = Errores Costosos",
+        description: "Tu equipo pierde 15 horas semanales en tareas repetitivas. María automatiza confirmaciones, cancelaciones y reprogramaciones. Más tiempo para atención de calidad."
       },
       howItWorks: "Cómo funciona:",
       step1: "Se integra perfectamente con tus sistemas existentes",
@@ -182,12 +182,12 @@ const translations: Record<Language, Translations> = {
       step3: "Aprende y mejora continuamente su rendimiento",
       whyChoose: "Por qué las Clínicas Eligen DentalFlow",
       benefits: {
-        scheduling: "Agendamiento Inteligente",
-        communication: "Comunicación con Pacientes",
-        timeSaved: "Tiempo Ahorrado",
-        security: "Cumple HIPAA",
-        setupTime: "Tiempo de Setup",
-        satisfaction: "Satisfacción de Pacientes"
+        scheduling: "Agenda Digital Sincronizada",
+        communication: "Reactivación de Pacientes",
+        timeSaved: "Tiempo Liberado",
+        security: "Datos Seguros",
+        setupTime: "Setup Rápido",
+        satisfaction: "Reseñas 5 Estrellas"
       }
     },
     testimonials: {
@@ -208,8 +208,8 @@ const translations: Record<Language, Translations> = {
       }
     },
     pricing: {
-      title: "Precios simples, ROI garantizado",
-      subtitle: "María se paga sola. En promedio, nuestras clínicas recuperan la inversión en 3 semanas",
+      title: "La inversión que se paga sola",
+      subtitle: "Con solo evitar 5 ausencias al mes, María ya pagó su costo. El promedio es 40 ausencias evitadas.",
       monthly: "/mes",
       popular: "Más popular",
       features: {
@@ -228,8 +228,8 @@ const translations: Record<Language, Translations> = {
       }
     },
     cta: {
-      title: "Empieza a reducir ausencias hoy mismo",
-      subtitle: "María puede estar trabajando en tu clínica en menos de 24 horas",
+      title: "Deja de perder RD$150,000 cada mes",
+      subtitle: "María empieza a recuperar pacientes ausentes en menos de 24 horas",
       freeTrialDays: "14 días gratis",
       noCreditCard: "Sin tarjeta de crédito",
       setupTime: "Setup en 24h",
@@ -269,11 +269,11 @@ const translations: Record<Language, Translations> = {
       dashboard: "Dashboard"
     },
     hero: {
-      badge: "#1 AI Assistant for Dental Clinics",
-      title1: "Reduce No-Shows by",
-      title2: "73%",
-      title3: "with AI-Powered Automation",
-      subtitle: "DentalFlow AI automatically confirms appointments, predicts cancellations, and fills gaps in your schedule - all through intelligent WhatsApp conversations.",
+      badge: "The AI that Eliminates Lost Revenue from Forgotten Appointments",
+      title1: "Each no-show costs you",
+      title2: "$125",
+      title3: "Maria reduces them by 73%",
+      subtitle: "Receptionists waste 3 hours daily confirming appointments. Patients forget their appointments. Your clinic loses $7,500 monthly. Maria solves all this with intelligent WhatsApp automation.",
       emailPlaceholder: "Enter your work email",
       stats: {
         clinics: "Active Clinics",
@@ -287,20 +287,20 @@ const translations: Record<Language, Translations> = {
       }
     },
     features: {
-      title1: "Everything You Need to",
-      title2: "Transform Your Practice",
-      subtitle: "DentalFlow AI handles the entire patient communication lifecycle, so you can focus on providing excellent dental care.",
+      title1: "Problems That Cost Money",
+      title2: "And How We Solve Them",
+      subtitle: "Every unsolved problem means losses. We identified the 12 main pain points of dental clinics and created automatic solutions for each one.",
       assistant: {
-        title: "24/7 AI Assistant",
-        description: "Maria never sleeps. Automatically confirms and reschedules appointments via WhatsApp, SMS, or email."
+        title: "Forgotten Appointments = Lost Money",
+        description: "30% of patients forget their appointments. Maria sends automatic reminders 24h and 3h before. Result: -73% no-shows, +$7,500/month recovered."
       },
       analytics: {
-        title: "Predictive Analytics",
-        description: "93% accuracy in predicting no-shows. AI learns from each patient's behavior patterns."
+        title: "Missed Calls = Lost Patients",
+        description: "Every unanswered call is a patient going to the competition. Maria automatically responds on WhatsApp with immediate booking options."
       },
       revenue: {
-        title: "Revenue Optimization",
-        description: "Automatically fills cancelled slots. Average 40% revenue increase in the first 3 months."
+        title: "Overloaded Staff = Costly Errors",
+        description: "Your team wastes 15 hours weekly on repetitive tasks. Maria automates confirmations, cancellations, and rescheduling. More time for quality care."
       },
       howItWorks: "How it works:",
       step1: "Seamlessly integrates with your existing systems",
@@ -308,12 +308,12 @@ const translations: Record<Language, Translations> = {
       step3: "Continuously learns and improves performance",
       whyChoose: "Why Dental Practices Choose DentalFlow",
       benefits: {
-        scheduling: "Smart Scheduling",
-        communication: "Patient Communication",
-        timeSaved: "Time Saved",
-        security: "HIPAA Compliant",
-        setupTime: "Setup Time",
-        satisfaction: "Patient Satisfaction"
+        scheduling: "Synced Digital Calendar",
+        communication: "Patient Reactivation",
+        timeSaved: "Time Freed Up",
+        security: "Secure Data",
+        setupTime: "Quick Setup",
+        satisfaction: "5-Star Reviews"
       }
     },
     testimonials: {
@@ -334,8 +334,8 @@ const translations: Record<Language, Translations> = {
       }
     },
     pricing: {
-      title: "Simple pricing, guaranteed ROI",
-      subtitle: "Maria pays for herself. On average, our clinics recover their investment in 3 weeks",
+      title: "The investment that pays for itself",
+      subtitle: "By preventing just 5 no-shows per month, Maria has already paid for herself. The average is 40 prevented no-shows.",
       monthly: "/month",
       popular: "Most popular",
       features: {
@@ -354,8 +354,8 @@ const translations: Record<Language, Translations> = {
       }
     },
     cta: {
-      title: "Start reducing no-shows today",
-      subtitle: "Maria can be working in your clinic in less than 24 hours",
+      title: "Stop losing $7,500 every month",
+      subtitle: "Maria starts recovering absent patients in less than 24 hours",
       freeTrialDays: "14-day free trial",
       noCreditCard: "No credit card required",
       setupTime: "Setup in 24h",

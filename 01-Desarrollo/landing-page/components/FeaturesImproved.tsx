@@ -11,13 +11,19 @@ import {
   Shield,
   Zap,
   Users,
-  Sparkles
+  Sparkles,
+  PhoneOff,
+  Star,
+  DollarSign,
+  BarChart,
+  AlertCircle,
+  Target
 } from "lucide-react"
 import ImagePlaceholder from "./ImagePlaceholder"
 import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function FeaturesImproved() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const features = [
     {
@@ -40,13 +46,43 @@ export default function FeaturesImproved() {
     }
   ]
 
-  const benefits = [
-    { icon: Calendar, title: t.features.benefits.scheduling, value: "100% automated", gradient: "from-orange-400 to-red-400" },
-    { icon: MessageSquare, title: t.features.benefits.communication, value: "5 languages", gradient: "from-blue-400 to-indigo-400" },
-    { icon: Clock, title: t.features.benefits.timeSaved, value: "15 hrs/week", gradient: "from-green-400 to-teal-400" },
-    { icon: Shield, title: t.features.benefits.security, value: "100% secure", gradient: "from-gray-600 to-gray-800" },
-    { icon: Zap, title: t.features.benefits.setupTime, value: "< 24 hours", gradient: "from-yellow-400 to-orange-400" },
-    { icon: Users, title: t.features.benefits.satisfaction, value: "4.9/5 rating", gradient: "from-purple-400 to-pink-400" }
+  const painPoints = [
+    { 
+      icon: Calendar, 
+      pain: language === 'es' ? "Agenda desordenada" : "Disorganized schedule",
+      solution: language === 'es' ? "Sincronización total" : "Full synchronization",
+      gradient: "from-orange-400 to-red-400" 
+    },
+    { 
+      icon: Star, 
+      pain: language === 'es' ? "Pocas reseñas online" : "Few online reviews",
+      solution: language === 'es' ? "Solicitud automática" : "Automatic requests",
+      gradient: "from-yellow-400 to-amber-400" 
+    },
+    { 
+      icon: Target, 
+      pain: language === 'es' ? "Leads sin seguimiento" : "Leads without follow-up",
+      solution: language === 'es' ? "CRM automatizado" : "Automated CRM",
+      gradient: "from-blue-400 to-indigo-400" 
+    },
+    { 
+      icon: DollarSign, 
+      pain: language === 'es' ? "Cobranza tardía" : "Late collections",
+      solution: language === 'es' ? "Recordatorios de pago" : "Payment reminders",
+      gradient: "from-green-400 to-emerald-400" 
+    },
+    { 
+      icon: BarChart, 
+      pain: language === 'es' ? "Sin métricas claras" : "No clear metrics",
+      solution: language === 'es' ? "Dashboard ejecutivo" : "Executive dashboard",
+      gradient: "from-purple-400 to-pink-400" 
+    },
+    { 
+      icon: AlertCircle, 
+      pain: language === 'es' ? "Errores manuales" : "Manual errors",
+      solution: language === 'es' ? "Flujos automáticos" : "Automated flows",
+      gradient: "from-red-400 to-rose-400" 
+    }
   ]
 
   return (
@@ -185,13 +221,13 @@ export default function FeaturesImproved() {
           
           <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
-              {t.features.whyChoose}
+              {language === 'es' ? 'Más Problemas que Resolvemos Automáticamente' : 'More Problems We Solve Automatically'}
             </h3>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {painPoints.map((point, index) => (
                 <motion.div
-                  key={benefit.title}
+                  key={point.pain}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -201,13 +237,13 @@ export default function FeaturesImproved() {
                 >
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 transition-all hover:shadow-lg">
                     <motion.div 
-                      className={`w-16 h-16 bg-gradient-to-br ${benefit.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
+                      className={`w-16 h-16 bg-gradient-to-br ${point.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
                     >
-                      <benefit.icon className="w-8 h-8 text-white" />
+                      <point.icon className="w-8 h-8 text-white" />
                     </motion.div>
-                    <h4 className="font-semibold mb-2 text-center text-gray-900">{benefit.title}</h4>
-                    <p className={`text-2xl font-bold text-center bg-gradient-to-r ${benefit.gradient} bg-clip-text text-transparent`}>
-                      {benefit.value}
+                    <h4 className="font-semibold mb-1 text-center text-red-600">❌ {point.pain}</h4>
+                    <p className={`text-lg font-medium text-center text-green-600`}>
+                      ✓ {point.solution}
                     </p>
                   </div>
                 </motion.div>
