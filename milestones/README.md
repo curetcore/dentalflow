@@ -10,9 +10,15 @@ Este directorio contiene la documentación de todos los hitos importantes del pr
 **Resultado**: Landing page completa, estructura del proyecto, GitHub configurado  
 [Ver documentación completa](./MILESTONE_001_PROYECTO_INICIADO.md)
 
+### ✅ Milestone #002: Landing Page Deployed en Producción
+**Fecha**: 5 de Septiembre, 2025  
+**Duración**: 2 horas  
+**Resultado**: Landing live en EasyPanel, pipeline CI/CD configurado, dominio activo  
+[Ver documentación completa](./MILESTONE_002_LANDING_PAGE_DEPLOYED.md)
+
 ## 📅 Próximos Milestones Planificados
 
-### ⏳ Milestone #002: MVP Funcional
+### ⏳ Milestone #003: MVP Funcional con María AI
 **Target**: 12 de Septiembre, 2025  
 **Objetivos**:
 - María AI respondiendo mensajes básicos
@@ -46,9 +52,9 @@ Este directorio contiene la documentación de todos los hitos importantes del pr
 
 ## 📈 Métricas de Progreso General
 
-- **Milestones Completados**: 1/5 (20%)
-- **Días desde inicio**: 0
-- **Velocidad**: Según plan
+- **Milestones Completados**: 2/5 (40%)
+- **Días desde inicio**: 1
+- **Velocidad**: Adelantados (2 milestones en 1 día)
 
 ## 🏷️ Nomenclatura
 
