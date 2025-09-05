@@ -1,111 +1,91 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, Star, Zap, Users, BarChart, Shield, Headphones, Globe, X } from "lucide-react"
+import { Check, X, Star, TrendingUp, Clock } from "lucide-react"
+
+const allFeatures = [
+  { id: "patients", label: "Pacientes activos" },
+  { id: "confirmations", label: "Plantillas de confirmación WhatsApp" },
+  { id: "sms", label: "Integración para enviar SMS" },
+  { id: "reminders", label: "Recordatorios programados" },
+  { id: "ai", label: "Reportes de patrones de ausencias" },
+  { id: "reactivation", label: "Plantillas de reactivación" },
+  { id: "reviews", label: "Enlaces para solicitar reseñas" },
+  { id: "dashboard", label: "Dashboard con métricas en tiempo real" },
+  { id: "api", label: "Integración API con tu sistema" },
+  { id: "users", label: "Usuarios del equipo" },
+  { id: "support", label: "Soporte prioritario 24/7" },
+  { id: "guarantee", label: "Garantía devolución 30 días" },
+  { id: "setup", label: "Setup profesional incluido" },
+  { id: "training", label: "Capacitación personalizada" }
+]
 
 const plans = [
   {
-    name: "Free",
-    price: "$0",
-    originalPrice: "",
-    period: "/mes",
-    description: "Prueba el poder de la automatización",
-    savings: "GRATIS para siempre",
-    features: [
-      "Hasta 50 pacientes activos",
-      "25 confirmaciones por mes",
-      "Recordatorios solo 24h antes",
-      "Dashboard básico",
-      "1 usuario",
-      "Marca de agua DentalFlow",
-      "Soporte por comunidad"
-    ],
-    notIncluded: [
-      "SMS",
-      "Campañas de reactivación",
-      "Predicciones IA avanzadas",
-      "Personalización"
-    ],
-    cta: "Empezar Gratis",
+    name: "Gratis",
+    price: "RD$0",
+    period: "/mes para siempre",
+    description: "Perfecto para probar",
+    cta: "Comenzar Gratis",
     featured: false,
-    icon: Zap,
-    badge: "NUEVO"
+    urgency: "Sin tarjeta de crédito",
+    included: ["patients", "confirmations", "reminders", "dashboard"],
+    limits: {
+      patients: "50",
+      confirmations: "Manual con plantillas",
+      reminders: "Solo 24h antes",
+      dashboard: "Básico",
+      users: "1",
+      support: "Comunidad"
+    }
   },
   {
-    name: "Starter",
-    price: "$97",
-    originalPrice: "$197",
+    name: "Básico",
+    price: "RD$5,500",
+    originalPrice: "RD$11,000",
     period: "/mes",
-    description: "Perfecto para clínicas pequeñas",
-    savings: "Ahorra $100/mes",
-    features: [
-      "Hasta 500 pacientes activos",
-      "Confirmaciones automáticas WhatsApp",
-      "Recordatorios 24h y 3h antes",
-      "Dashboard básico de métricas",
-      "Reducción de 50% en ausencias",
-      "Soporte por email en horario laboral",
-      "1 usuario administrador"
-    ],
-    notIncluded: [
-      "SMS ilimitados",
-      "Campañas de reactivación",
-      "API personalizada",
-      "Multi-sucursal"
-    ],
-    cta: "Prueba 1 Mes Gratis",
+    description: "El favorito de clínicas pequeñas",
+    cta: "Empezar 1 Mes Gratis",
     featured: false,
-    icon: Users
+    urgency: "Ahorra 50% primeros 3 meses",
+    savings: "Reduce hasta 25% las ausencias",
+    included: ["patients", "confirmations", "reminders", "dashboard", "users", "support", "guarantee"],
+    limits: {
+      patients: "500",
+      confirmations: "Semi-automatizado",
+      reminders: "24h, 3h y 1h antes", 
+      dashboard: "Completo",
+      users: "3",
+      support: "Email y chat"
+    }
   },
   {
-    name: "Professional",
-    price: "$197",
-    originalPrice: "$397",
+    name: "Completo",
+    price: "RD$11,000",
+    originalPrice: "RD$22,000",
     period: "/mes",
-    description: "La elección #1 de clínicas en crecimiento",
-    savings: "Ahorra $200/mes + 2 meses GRATIS",
-    features: [
-      "Pacientes ILIMITADOS",
-      "WhatsApp + SMS ilimitados",
-      "IA predictiva (93% precisión)",
-      "Respuesta automática a llamadas perdidas",
-      "Campañas de reactivación (3-6-12 meses)",
-      "Solicitud automática de reseñas Google",
-      "Dashboard ejecutivo completo",
-      "API para integrar con tu sistema",
-      "Soporte prioritario 24/7",
-      "Hasta 5 usuarios del equipo",
-      "Garantía: -73% ausencias o te devolvemos el dinero"
-    ],
-    notIncluded: [],
+    description: "Todo lo que necesitas para crecer",
     cta: "Empezar 1 Mes Gratis",
     featured: true,
-    bonus: "🎁 BONUS: Setup profesional GRATIS (valor $500)",
-    icon: Users
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    originalPrice: "",
-    period: "",
-    description: "Para cadenas y multi-sucursal",
-    savings: "Precios por volumen",
-    features: [
-      "Todo en Professional +",
-      "Multi-sucursal ilimitadas",
-      "Manager de éxito dedicado",
-      "Integraciones custom",
-      "Training on-site para tu equipo",
-      "SLA garantizado 99.9%",
-      "Reportes personalizados",
-      "Marca blanca disponible",
-      "Usuarios ilimitados",
-      "Soporte telefónico dedicado"
-    ],
-    notIncluded: [],
-    cta: "Agendar Demo",
-    featured: false,
-    icon: Globe
+    urgency: "⚡ Precio de lanzamiento - Primeros 100 clientes",
+    savings: "Reduce hasta 40% las ausencias",
+    bonus: "🎁 GRATIS: Setup RD$56,000 + 2 meses extra",
+    included: ["patients", "confirmations", "sms", "reminders", "ai", "reactivation", "reviews", "dashboard", "api", "users", "support", "guarantee", "setup", "training"],
+    limits: {
+      patients: "ILIMITADOS",
+      confirmations: "Automatizado completo",
+      sms: "✓ Incluidos",
+      reminders: "Personalizables",
+      ai: "✓ Reportes detallados",
+      reactivation: "✓ Automática",
+      reviews: "✓ Google Reviews",
+      dashboard: "Ejecutivo + Reportes",
+      api: "✓ Completa",
+      users: "10",
+      support: "24/7 Prioritario + WhatsApp",
+      setup: "✓ GRATIS",
+      training: "✓ 2 sesiones"
+    }
   }
 ]
 
@@ -118,36 +98,25 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <span className="animate-pulse">🔥</span>
-            Oferta limitada: Precios especiales de lanzamiento
+          <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
+            <Clock className="w-4 h-4" />
+            Oferta termina en 48 horas
           </div>
+          
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            La inversión que se paga sola en 2 semanas
+            Deja de perder RD$420,000 al mes
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Con solo evitar 5 ausencias al mes, María ya pagó su costo. 
-            El promedio de nuestras clínicas evita 40 ausencias mensuales.
+          <p className="text-xl md:text-2xl text-gray-600 mb-4">
+            Las clínicas pierden hasta 40 pacientes mensuales por falta de seguimiento
           </p>
-          <div className="mt-6 flex items-center justify-center gap-8 text-sm">
-            <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-600" />
-              <span className="text-gray-700">Garantía 30 días</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Headphones className="w-5 h-5 text-blue-600" />
-              <span className="text-gray-700">Soporte en español</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BarChart className="w-5 h-5 text-purple-600" />
-              <span className="text-gray-700">ROI comprobado</span>
-            </div>
-          </div>
+          <p className="text-lg text-gray-500">
+            Con DentalFlow recuperas esos pacientes desde el día 1
+          </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -156,133 +125,133 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
-                plan.featured ? 'ring-4 ring-primary ring-offset-4 scale-105' : ''
+              className={`relative bg-white rounded-2xl overflow-hidden ${
+                plan.featured 
+                  ? 'ring-4 ring-primary ring-offset-4 shadow-2xl scale-105' 
+                  : 'shadow-lg hover:shadow-xl'
               }`}
             >
               {plan.featured && (
-                <div className="absolute -top-5 -right-20 bg-gradient-to-r from-primary via-secondary to-mint text-white px-20 py-1 rotate-12 text-sm font-bold">
-                  MÁS POPULAR
+                <div className="absolute -top-5 -right-20 bg-gradient-to-r from-orange-500 to-red-500 text-white px-20 py-1 rotate-12 text-sm font-bold">
+                  MÁS VENDIDO
                 </div>
               )}
               
-              {plan.savings && (
-                <div className="bg-gradient-to-r from-mint to-primary text-white text-center py-2 text-sm font-medium">
-                  {plan.savings}
+              {plan.urgency && (
+                <div className={`${plan.featured ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-gray-800'} text-white text-center py-2 text-sm font-medium`}>
+                  {plan.urgency}
                 </div>
               )}
 
               <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold">{plan.name}</h3>
-                    <p className="text-gray-600">{plan.description}</p>
-                  </div>
-                  <plan.icon className={`w-10 h-10 ${plan.featured ? 'text-primary' : 'text-gray-400'}`} />
-                </div>
+                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                <p className="text-gray-600 mb-4">{plan.description}</p>
                 
-                <div className="flex items-baseline mb-8">
+                <div className="mb-6">
                   {plan.originalPrice && (
                     <span className="text-2xl text-gray-400 line-through mr-2">{plan.originalPrice}</span>
                   )}
                   <span className="text-5xl font-bold">{plan.price}</span>
-                  <span className="text-gray-600 ml-1">{plan.period}</span>
+                  <span className="text-gray-600 text-sm ml-2">{plan.period}</span>
                 </div>
 
+                {plan.savings && (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-4">
+                    <p className="text-sm font-semibold text-green-800 flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4" />
+                      {plan.savings}
+                    </p>
+                  </div>
+                )}
+
                 {plan.bonus && (
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6 text-sm">
+                  <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-3 mb-6 text-sm font-semibold text-yellow-800">
                     {plan.bonus}
                   </div>
                 )}
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                  {plan.notIncluded.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 opacity-50">
-                      <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-500 line-through">{feature}</span>
-                    </li>
-                  ))}
+                  {allFeatures.map((feature) => {
+                    const isIncluded = plan.included.includes(feature.id);
+                    const limit = plan.limits[feature.id as keyof typeof plan.limits];
+                    
+                    return (
+                      <li key={feature.id} className={`flex items-start gap-3 ${!isIncluded ? 'opacity-50' : ''}`}>
+                        {isIncluded ? (
+                          <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        ) : (
+                          <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                        )}
+                        <span className={`text-sm ${!isIncluded ? 'line-through text-gray-500' : 'text-gray-700'}`}>
+                          {feature.label}
+                          {isIncluded && limit && (
+                            <span className="font-semibold text-gray-900"> ({limit})</span>
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${
+                  className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
                     plan.featured
-                      ? 'bg-gradient-to-r from-primary via-secondary to-mint text-white hover:shadow-xl hover:shadow-primary/20'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                      ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:shadow-xl'
+                      : plan.name === "Gratis"
+                      ? 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                      : 'bg-primary text-white hover:bg-primary/90'
                   }`}
                 >
                   {plan.cta}
                 </motion.button>
 
                 {plan.featured && (
-                  <p className="text-center text-sm text-gray-500 mt-4">
-                    Sin tarjeta de crédito • Cancela cuando quieras
-                  </p>
+                  <div className="mt-4 text-center">
+                    <p className="text-xs text-gray-500">
+                      Cancela cuando quieras • Garantía 30 días
+                    </p>
+                  </div>
                 )}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Comparación rápida */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 bg-blue-50 rounded-3xl p-8 max-w-4xl mx-auto"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center">
-            ¿Por qué el 87% elige Professional?
-          </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">73%</div>
-              <p className="text-gray-600">Reducción garantizada de ausencias</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">RD$420,000</div>
-              <p className="text-gray-600">Recuperados en promedio al mes</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-secondary to-mint bg-clip-text text-transparent mb-2">2 semanas</div>
-              <p className="text-gray-600">Tiempo promedio de ROI</p>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-lg font-medium text-gray-900 mb-4">
-              "Pasamos de perder RD$560,000/mes por ausencias a recuperar RD$475,000. El sistema pagó su costo anual en el primer mes."
-            </p>
-            <p className="text-sm text-gray-600">
-              — Dra. Carmen Rodríguez, SmileCare Dental
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Urgencia */}
+        {/* Urgency and social proof */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center space-y-4"
         >
-          <p className="text-lg text-gray-700">
-            ⏰ Oferta especial termina en: 
-            <span className="font-bold text-red-600 ml-2">3 días, 14 horas</span>
-          </p>
-          <p className="text-sm text-gray-600 mt-2">
-            Después los precios suben a tarifas regulares
+          <div className="flex items-center justify-center gap-8 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <img
+                    key={i}
+                    src={`https://picsum.photos/seed/user${i}/40/40`}
+                    alt=""
+                    className="w-8 h-8 rounded-full border-2 border-white"
+                  />
+                ))}
+              </div>
+              <span>+2,347 clínicas activas</span>
+            </div>
+            
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              ))}
+              <span className="ml-1">4.9/5 (847 reseñas)</span>
+            </div>
+          </div>
+
+          <p className="text-lg font-semibold text-gray-800">
+            ⚡ 12 clínicas más se unieron en las últimas 2 horas
           </p>
         </motion.div>
       </div>

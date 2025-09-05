@@ -12,8 +12,8 @@ const features = [
   },
   {
     icon: Brain,
-    title: "Predice ausencias con 93% precisión",
-    description: "IA que aprende de cada paciente y anticipa no-shows",
+    title: "Analiza patrones de ausencias",
+    description: "Reportes detallados para entender el comportamiento de tus pacientes",
     color: "text-secondary"
   },
   {
@@ -24,20 +24,20 @@ const features = [
   },
   {
     icon: MessageSquare,
-    title: "Respuestas personalizadas",
-    description: "Cada mensaje se adapta al historial del paciente",
+    title: "Plantillas personalizables",
+    description: "Mensajes profesionales adaptados a tu clínica",
     color: "text-primary"
   },
   {
     icon: Calendar,
-    title: "Integración total",
-    description: "Conecta con tu sistema de citas actual sin cambios",
+    title: "Fácil implementación",
+    description: "Sistema sencillo que tu equipo puede usar desde el día 1",
     color: "text-secondary"
   },
   {
     icon: Clock,
-    title: "ROI en 30 días",
-    description: "Resultados medibles desde el primer mes",
+    title: "Resultados rápidos",
+    description: "Mejora visible en asistencia desde la primera semana",
     color: "text-accent"
   }
 ]

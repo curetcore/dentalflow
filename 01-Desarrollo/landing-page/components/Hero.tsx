@@ -84,7 +84,7 @@ export default function Hero() {
           >
             <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-md mx-auto">
               <div className="bg-primary/10 rounded-lg p-4 mb-4">
-                <p className="text-sm text-gray-600 mb-2">María AI escribiendo...</p>
+                <p className="text-sm text-gray-600 mb-2">Enviando recordatorio...</p>
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: '100%' }}
