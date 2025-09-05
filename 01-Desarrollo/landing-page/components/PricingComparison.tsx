@@ -1,205 +1,273 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, X } from "lucide-react"
+import { Check, X, TrendingDown, TrendingUp, AlertTriangle } from "lucide-react"
 
-const features = [
-  { name: "Pacientes activos", free: "50", starter: "500", pro: "Ilimitados", enterprise: "Ilimitados" },
-  { name: "Confirmaciones mensuales", free: "25", starter: "Ilimitadas", pro: "Ilimitadas", enterprise: "Ilimitadas" },
-  { name: "WhatsApp automático", free: false, starter: true, pro: true, enterprise: true },
-  { name: "SMS incluidos", free: false, starter: false, pro: "Ilimitados", enterprise: "Ilimitados" },
-  { name: "Recordatorios anticipados", free: "24h", starter: "24h y 3h", pro: "Personalizados", enterprise: "Personalizados" },
-  { name: "IA predictiva", free: false, starter: "Básica", pro: "Avanzada (93%)", enterprise: "Premium" },
-  { name: "Campañas reactivación", free: false, starter: false, pro: true, enterprise: true },
-  { name: "Solicitud de reseñas", free: false, starter: false, pro: true, enterprise: true },
-  { name: "Dashboard analytics", free: "Básico", starter: "Básico", pro: "Ejecutivo", enterprise: "Personalizado" },
-  { name: "Usuarios incluidos", free: "1", starter: "1", pro: "5", enterprise: "Ilimitados" },
-  { name: "API integración", free: false, starter: false, pro: true, enterprise: true },
-  { name: "Multi-sucursal", free: false, starter: false, pro: false, enterprise: true },
-  { name: "Soporte", free: "Comunidad", starter: "Email", pro: "24/7 Prioritario", enterprise: "Dedicado + SLA" },
-  { name: "Marca blanca", free: false, starter: false, pro: false, enterprise: true },
-  { name: "Setup profesional", free: false, starter: false, pro: "GRATIS", enterprise: "On-site" },
+const comparison = [
+  {
+    category: "Gestión de Citas",
+    without: {
+      issue: "30-40% de pacientes no se presentan",
+      impact: "RD$420,000 perdidos al mes",
+      icon: TrendingDown,
+      color: "text-red-600"
+    },
+    with: {
+      solution: "Confirmación automática 24/7",
+      benefit: "Reduce ausencias hasta 73%",
+      icon: TrendingUp,
+      color: "text-green-600"
+    }
+  },
+  {
+    category: "Comunicación con Pacientes",
+    without: {
+      issue: "Llamadas manuales todo el día",
+      impact: "4-5 horas diarias perdidas",
+      icon: AlertTriangle,
+      color: "text-orange-600"
+    },
+    with: {
+      solution: "WhatsApp automatizado con plantillas",
+      benefit: "Ahorra 20 horas semanales",
+      icon: Check,
+      color: "text-primary"
+    }
+  },
+  {
+    category: "Reagendamiento",
+    without: {
+      issue: "Espacios vacíos por cancelaciones",
+      impact: "25% menos productividad",
+      icon: X,
+      color: "text-gray-600"
+    },
+    with: {
+      solution: "Lista de espera inteligente",
+      benefit: "Llena espacios en minutos",
+      icon: Check,
+      color: "text-secondary"
+    }
+  },
+  {
+    category: "Recordatorios",
+    without: {
+      issue: "Pacientes olvidan sus citas",
+      impact: "Pérdida de confianza y dinero",
+      icon: AlertTriangle,
+      color: "text-red-500"
+    },
+    with: {
+      solution: "Recordatorios programados (24h, 3h, 1h)",
+      benefit: "93% asistencia puntual",
+      icon: TrendingUp,
+      color: "text-mint"
+    }
+  },
+  {
+    category: "Reactivación de Pacientes",
+    without: {
+      issue: "Pacientes inactivos olvidados",
+      impact: "40% base de datos inactiva",
+      icon: TrendingDown,
+      color: "text-gray-500"
+    },
+    with: {
+      solution: "Campañas automáticas de reactivación",
+      benefit: "Recupera 30% de inactivos",
+      icon: TrendingUp,
+      color: "text-accent"
+    }
+  },
+  {
+    category: "Análisis y Reportes",
+    without: {
+      issue: "Sin datos de comportamiento",
+      impact: "Decisiones sin fundamento",
+      icon: X,
+      color: "text-gray-600"
+    },
+    with: {
+      solution: "Dashboard con métricas en tiempo real",
+      benefit: "Decisiones basadas en datos",
+      icon: Check,
+      color: "text-primary"
+    }
+  },
+  {
+    category: "Costo Operativo",
+    without: {
+      issue: "Personal dedicado a llamar",
+      impact: "RD$40,000+ en salarios",
+      icon: TrendingDown,
+      color: "text-red-600"
+    },
+    with: {
+      solution: "Automatización completa",
+      benefit: "ROI de 420% en 3 meses",
+      icon: TrendingUp,
+      color: "text-green-600"
+    }
+  }
 ]
 
 export default function PricingComparison() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Comparación detallada de planes
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            La diferencia es <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">dramática</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Encuentra el plan perfecto para tu clínica. Todos incluyen 1 mes de prueba gratis.
+          <p className="text-xl md:text-2xl text-gray-600">
+            Mira cómo DentalFlow transforma tu clínica desde el día 1
           </p>
         </motion.div>
 
-        <div className="max-w-7xl mx-auto overflow-x-auto">
-          <motion.table
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="w-full bg-white rounded-2xl shadow-lg overflow-hidden"
-          >
-            <thead>
-              <tr className="bg-primary text-white">
-                <th className="px-6 py-4 text-left font-semibold">Características</th>
-                <th className="px-6 py-4 text-center font-semibold">
-                  <div>Free</div>
-                  <div className="text-2xl mt-1">RD$0</div>
-                </th>
-                <th className="px-6 py-4 text-center font-semibold">
-                  <div>Starter</div>
-                  <div className="text-2xl mt-1">RD$5,500</div>
-                </th>
-                <th className="px-6 py-4 text-center font-semibold bg-white/20">
-                  <div className="flex items-center justify-center gap-2">
-                    <span>Professional</span>
-                    <span className="bg-white/30 px-2 py-1 rounded text-xs">POPULAR</span>
+        <div className="max-w-6xl mx-auto">
+          {/* Desktop view */}
+          <div className="hidden lg:block">
+            <div className="grid grid-cols-12 gap-6 mb-8">
+              <div className="col-span-4"></div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="col-span-4 bg-red-50 border-2 border-red-200 rounded-2xl p-6 text-center"
+              >
+                <h3 className="text-2xl font-bold text-red-600 mb-2">Sin DentalFlow</h3>
+                <p className="text-gray-600">Problemas y pérdidas constantes</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="col-span-4 bg-green-50 border-2 border-green-200 rounded-2xl p-6 text-center"
+              >
+                <h3 className="text-2xl font-bold text-green-600 mb-2">Con DentalFlow</h3>
+                <p className="text-gray-600">Soluciones y crecimiento</p>
+              </motion.div>
+            </div>
+
+            {comparison.map((item, index) => (
+              <motion.div
+                key={item.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="grid grid-cols-12 gap-6 mb-6"
+              >
+                <div className="col-span-4 flex items-center justify-end">
+                  <h4 className="text-lg font-bold text-gray-800">{item.category}</h4>
+                </div>
+                
+                <div className="col-span-4 bg-white rounded-xl shadow-sm border border-red-100 p-6 hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className={`p-3 rounded-full bg-red-50 ${item.without.color}`}>
+                      <item.without.icon className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-gray-800 mb-1">{item.without.issue}</p>
+                      <p className="text-sm text-red-600">{item.without.impact}</p>
+                    </div>
                   </div>
-                  <div className="text-2xl mt-1">RD$11,000</div>
-                </th>
-                <th className="px-6 py-4 text-center font-semibold">
-                  <div>Enterprise</div>
-                  <div className="text-xl mt-1">Custom</div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {features.map((feature, index) => (
-                <motion.tr
-                  key={feature.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                >
-                  <td className="px-6 py-4 font-medium text-gray-900">{feature.name}</td>
-                  <td className="px-6 py-4 text-center">
-                    {renderFeatureValue(feature.free)}
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    {renderFeatureValue(feature.starter)}
-                  </td>
-                  <td className="px-6 py-4 text-center bg-primary/5">
-                    {renderFeatureValue(feature.pro)}
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    {renderFeatureValue(feature.enterprise)}
-                  </td>
-                </motion.tr>
-              ))}
-            </tbody>
-            <tfoot>
-              <tr className="bg-gray-100">
-                <td className="px-6 py-6"></td>
-                <td className="px-6 py-6 text-center">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="bg-gray-200 text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-all"
-                  >
-                    Empezar Gratis
-                  </motion.button>
-                </td>
-                <td className="px-6 py-6 text-center">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-all"
-                  >
-                    Prueba 1 Mes
-                  </motion.button>
-                </td>
-                <td className="px-6 py-6 text-center bg-primary/5">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-primary/90 hover:shadow-lg transition-all"
-                  >
-                    Empezar Ahora
-                  </motion.button>
-                </td>
-                <td className="px-6 py-6 text-center">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all"
-                  >
-                    Contactar
-                  </motion.button>
-                </td>
-              </tr>
-            </tfoot>
-          </motion.table>
+                </div>
+
+                <div className="col-span-4 bg-white rounded-xl shadow-sm border border-green-100 p-6 hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className={`p-3 rounded-full bg-green-50 ${item.with.color}`}>
+                      <item.with.icon className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-gray-800 mb-1">{item.with.solution}</p>
+                      <p className="text-sm text-green-600">{item.with.benefit}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile view */}
+          <div className="lg:hidden space-y-8">
+            {comparison.map((item, index) => (
+              <motion.div
+                key={item.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              >
+                <div className="bg-gradient-to-r from-primary to-secondary p-4">
+                  <h4 className="text-xl font-bold text-white">{item.category}</h4>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  {/* Sin DentalFlow */}
+                  <div className="bg-red-50 rounded-xl p-4 border border-red-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className={`p-2 rounded-full bg-red-100 ${item.without.color}`}>
+                        <item.without.icon className="w-5 h-5" />
+                      </div>
+                      <h5 className="font-bold text-red-800">Sin DentalFlow</h5>
+                    </div>
+                    <p className="text-sm font-medium text-gray-800">{item.without.issue}</p>
+                    <p className="text-xs text-red-600 mt-1">{item.without.impact}</p>
+                  </div>
+
+                  {/* Con DentalFlow */}
+                  <div className="bg-green-50 rounded-xl p-4 border border-green-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className={`p-2 rounded-full bg-green-100 ${item.with.color}`}>
+                        <item.with.icon className="w-5 h-5" />
+                      </div>
+                      <h5 className="font-bold text-green-800">Con DentalFlow</h5>
+                    </div>
+                    <p className="text-sm font-medium text-gray-800">{item.with.solution}</p>
+                    <p className="text-xs text-green-600 mt-1">{item.with.benefit}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Mobile comparison cards */}
-        <div className="lg:hidden mt-8 space-y-6">
-          {["Free", "Starter", "Professional", "Enterprise"].map((plan, planIndex) => (
-            <motion.div
-              key={plan}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: planIndex * 0.1 }}
-              className={`bg-white rounded-xl shadow-lg p-6 ${
-                plan === "Professional" ? "ring-2 ring-primary" : ""
-              }`}
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-10 max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              ¿Listo para transformar tu clínica?
+            </h3>
+            <p className="text-xl text-gray-700 mb-8">
+              Únete a más de 50 clínicas que ya están creciendo con DentalFlow
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-gradient-to-r from-primary via-secondary to-mint text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
             >
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold">{plan}</h3>
-                <p className="text-3xl font-bold text-primary mt-2">
-                  {plan === "Free" && "RD$0"}
-                  {plan === "Starter" && "RD$5,500"}
-                  {plan === "Professional" && "RD$11,000"}
-                  {plan === "Enterprise" && "Custom"}
-                </p>
-                {plan === "Professional" && (
-                  <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                    MÁS POPULAR
-                  </span>
-                )}
-              </div>
-              
-              <ul className="space-y-2">
-                {features.slice(0, 8).map((feature) => (
-                  <li key={feature.name} className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{feature.name}</span>
-                    <span className="font-medium">
-                      {renderFeatureValue(
-                        plan === "Free" ? feature.free :
-                        plan === "Starter" ? feature.starter :
-                        plan === "Professional" ? feature.pro :
-                        feature.enterprise
-                      )}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+              Empezar 1 Mes Gratis
+            </motion.button>
+            <p className="text-sm text-gray-600 mt-4">
+              Sin tarjeta de crédito • Cancela cuando quieras
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
-}
-
-function renderFeatureValue(value: string | boolean) {
-  if (typeof value === "boolean") {
-    return value ? (
-      <Check className="w-5 h-5 text-green-500 mx-auto" />
-    ) : (
-      <X className="w-5 h-5 text-gray-400 mx-auto" />
-    )
-  }
-  return <span className="text-gray-900 font-medium">{value}</span>
 }

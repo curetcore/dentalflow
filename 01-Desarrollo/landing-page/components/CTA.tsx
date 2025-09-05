@@ -52,7 +52,7 @@ export default function CTA() {
             >
               <ArrowRight className="w-8 h-8 mb-3 mx-auto" />
               <p className="font-semibold">Resultados día 1</p>
-              <p className="text-sm opacity-80">María empieza de inmediato</p>
+              <p className="text-sm opacity-80">Sistema activo de inmediato</p>
             </motion.div>
           </div>
 
@@ -67,7 +67,7 @@ export default function CTA() {
             </motion.button>
             
             <motion.a
-              href="https://wa.me/18095551234?text=Hola!%20Quiero%20saber%20más%20sobre%20María%20AI"
+              href="https://wa.me/18095551234?text=Hola!%20Quiero%20saber%20más%20sobre%20DentalFlow"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

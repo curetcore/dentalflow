@@ -80,9 +80,36 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative lg:scale-110"
           >
-            <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-md mx-auto">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-md mx-auto border-4 border-primary/10">
+              <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="https://picsum.photos/seed/clinic/48/48"
+                      alt="Clínica"
+                      className="w-10 h-10 rounded-full border-2 border-white/50"
+                    />
+                    <div>
+                      <p className="font-semibold">Clínica Dental Sonrisa</p>
+                      <p className="text-xs opacity-90 flex items-center gap-1">
+                        <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
+                        En línea ahora
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                        <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 bg-gray-50">
               <div className="bg-primary/10 rounded-lg p-4 mb-4">
                 <p className="text-sm text-gray-600 mb-2">Enviando recordatorio...</p>
                 <motion.div
@@ -93,7 +120,7 @@ export default function Hero() {
                 />
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-3 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
                 <div className="bg-gray-100 rounded-lg p-3 max-w-[80%]">
                   <p className="text-sm">¡Hola! Soy tu asistente dental 🦷. Te recuerdo tu cita mañana a las 3:00 PM con el Dr. Rodríguez</p>
                 </div>
@@ -101,25 +128,110 @@ export default function Hero() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2.5 }}
+                  transition={{ delay: 3 }}
                   className="bg-primary text-white rounded-lg p-3 max-w-[80%] ml-auto"
                 >
                   <p className="text-sm">Perfecto, ahí estaré!</p>
+                  <p className="text-xs opacity-80 mt-1">3:15 PM</p>
                 </motion.div>
                 
                 <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 3.5 }}
+                  className="flex items-center gap-2 px-3 py-1"
+                >
+                  <span className="text-gray-500 text-sm">Escribiendo</span>
+                  <div className="flex gap-1">
+                    {[0, 1, 2].map((i) => (
+                      <motion.div
+                        key={i}
+                        animate={{ opacity: [0.3, 1, 0.3] }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: 1.5,
+                          delay: i * 0.2
+                        }}
+                        className="w-2 h-2 bg-gray-400 rounded-full"
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 3.5 }}
+                  transition={{ delay: 5 }}
                   className="bg-gray-100 rounded-lg p-3 max-w-[80%]"
                 >
                   <p className="text-sm">✅ Cita confirmada. ¡Te esperamos!</p>
+                  <p className="text-xs text-gray-500 mt-1">3:16 PM</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 6.5 }}
+                  className="bg-gray-100 rounded-lg p-3 max-w-[80%]"
+                >
+                  <p className="text-sm">📍 Dirección: Av. Winston Churchill #123</p>
+                  <p className="text-xs text-gray-500 mt-1">3:16 PM</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 8 }}
+                  className="bg-blue-50 border border-blue-200 rounded-lg p-3 max-w-[80%]"
+                >
+                  <p className="text-sm text-blue-800">🔔 ¿Necesitas cambiar la hora? Escribe "CAMBIAR"</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 10 }}
+                  className="bg-primary text-white rounded-lg p-3 max-w-[80%] ml-auto"
+                >
+                  <p className="text-sm">¿Puedo llevar a mi niña?</p>
+                  <p className="text-xs opacity-80 mt-1">3:17 PM</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 11.5 }}
+                  className="bg-gray-100 rounded-lg p-3 max-w-[80%]"
+                >
+                  <p className="text-sm">¡Por supuesto! El Dr. Rodríguez es especialista en odontopediatría 👶</p>
+                  <p className="text-xs text-gray-500 mt-1">3:17 PM</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 13 }}
+                  className="bg-gray-100 rounded-lg p-3 max-w-[80%]"
+                >
+                  <p className="text-sm">💡 Consejo: Llegue 10 min antes para el papeleo</p>
+                  <p className="text-xs text-gray-500 mt-1">3:18 PM</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 14.5 }}
+                  className="bg-green-50 border border-green-200 rounded-lg p-3 max-w-[80%]"
+                >
+                  <p className="text-sm text-green-800">✅ Confirmación enviada al sistema</p>
+                  <p className="text-xs text-green-600 mt-1">Recibirás otro recordatorio 3h antes</p>
                 </motion.div>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
+    </div>
 
       {/* Demo Modal */}
       {showDemo && (
@@ -153,7 +265,7 @@ export default function Hero() {
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <button className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition">
-                Activar 14 días gratis
+                Activar 1 Mes Gratis
               </button>
             </form>
           </motion.div>

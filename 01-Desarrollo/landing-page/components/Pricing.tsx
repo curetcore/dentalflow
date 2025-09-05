@@ -149,10 +149,12 @@ export default function Pricing() {
                 
                 <div className="mb-6">
                   {plan.originalPrice && (
-                    <span className="text-2xl text-gray-400 line-through mr-2">{plan.originalPrice}</span>
+                    <span className="text-lg md:text-xl text-gray-400 line-through block">{plan.originalPrice}</span>
                   )}
-                  <span className="text-5xl font-bold">{plan.price}</span>
-                  <span className="text-gray-600 text-sm ml-2">{plan.period}</span>
+                  <div className="flex items-baseline flex-wrap">
+                    <span className="text-3xl md:text-4xl font-bold">{plan.price}</span>
+                    <span className="text-gray-600 text-sm ml-2">{plan.period}</span>
+                  </div>
                 </div>
 
                 {plan.savings && (
