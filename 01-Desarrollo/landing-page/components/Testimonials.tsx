@@ -10,7 +10,7 @@ const testimonials = [
     location: "Piantini, Santo Domingo",
     image: "/images/testimonial-1.jpg",
     rating: 5,
-    quote: "María AI cambió completamente nuestra clínica. Pasamos de 30% de ausencias a menos del 8%. Es increíble ver la agenda siempre llena.",
+    quote: "DentalFlow AI cambió completamente nuestra clínica. Pasamos de 30% de ausencias a menos del 8%. Es increíble ver la agenda siempre llena.",
     metrics: "+42% ingresos en 2 meses"
   },
   {
@@ -19,7 +19,7 @@ const testimonials = [
     location: "Naco, Santo Domingo",
     image: "/images/testimonial-2.jpg",
     rating: 5,
-    quote: "Lo mejor es que María aprende de cada paciente. Sabe quién necesita más recordatorios y ajusta su comunicación. Es como tener una asistente que nunca olvida nada.",
+    quote: "Lo mejor es que el sistema aprende de cada paciente. Sabe quién necesita más recordatorios y ajusta su comunicación. Es como tener una asistente que nunca olvida nada.",
     metrics: "73% menos no-shows"
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     location: "Blue Mall, Santo Domingo",
     image: "/images/testimonial-3.jpg",
     rating: 5,
-    quote: "Mis pacientes aman a María. Dicen que es súper amable y siempre responde rápido. Algunos hasta le cuentan cosas personales. ¡Es parte del equipo!",
+    quote: "Mis pacientes aman el sistema de recordatorios. Dicen que es súper amable y siempre responde rápido. La comunicación es tan natural que parece personal.",
     metrics: "4.9★ satisfacción pacientes"
   }
 ]
@@ -45,10 +45,10 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Clínicas que confían en María
+            Clínicas que confían en DentalFlow
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-            Más de 50 clínicas en RD ya transformaron su práctica con María AI
+            Más de 50 clínicas en RD ya transformaron su práctica con nuestro sistema
           </p>
         </motion.div>
 

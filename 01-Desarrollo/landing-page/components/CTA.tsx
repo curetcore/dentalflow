@@ -24,7 +24,7 @@ export default function CTA() {
             Deja de perder $7,500 cada mes
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            María empieza a recuperar pacientes ausentes en menos de 24 horas
+            Tu asistente dental empieza a recuperar pacientes ausentes en menos de 24 horas
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">

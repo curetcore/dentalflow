@@ -7,7 +7,7 @@ const features = [
   {
     icon: Bot,
     title: "Confirma citas 24/7",
-    description: "María nunca duerme. Confirma y reagenda automáticamente por WhatsApp",
+    description: "Tu asistente nunca duerme. Confirma y reagenda automáticamente por WhatsApp",
     color: "text-primary"
   },
   {
@@ -54,10 +54,10 @@ export default function Features() {
           className="text-center mb-16 max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            María AI hace el trabajo pesado
+            Automatización inteligente dental
           </h2>
           <p className="text-xl md:text-2xl text-gray-600">
-            Mientras tú atiendes pacientes, María gestiona toda la comunicación y optimiza tu agenda
+            Mientras tú atiendes pacientes, el sistema gestiona toda la comunicación y optimiza tu agenda
           </p>
         </motion.div>
 
@@ -92,10 +92,10 @@ export default function Features() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Ve a María en acción
+                Ve el sistema en acción
               </h3>
               <p className="text-gray-700 mb-6">
-                Descubre cómo María transforma la experiencia de tus pacientes y optimiza tu clínica
+                Descubre cómo la automatización transforma la experiencia de tus pacientes y optimiza tu clínica
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">

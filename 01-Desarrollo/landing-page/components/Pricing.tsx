@@ -9,7 +9,7 @@ const plans = [
     price: "$0",
     originalPrice: "",
     period: "/mes",
-    description: "Prueba el poder de María AI",
+    description: "Prueba el poder de la automatización",
     savings: "GRATIS para siempre",
     features: [
       "Hasta 50 pacientes activos",
@@ -250,7 +250,7 @@ export default function Pricing() {
               <p className="text-gray-600">Reducción garantizada de ausencias</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-mint bg-clip-text text-transparent mb-2">$7,500</div>
+              <div className="text-4xl font-bold text-primary mb-2">RD$420,000</div>
               <p className="text-gray-600">Recuperados en promedio al mes</p>
             </div>
             <div className="text-center">
@@ -261,7 +261,7 @@ export default function Pricing() {
 
           <div className="mt-8 text-center">
             <p className="text-lg font-medium text-gray-900 mb-4">
-              "Pasamos de perder $10,000/mes por ausencias a recuperar $8,500. María pagó su costo anual en el primer mes."
+              "Pasamos de perder RD$560,000/mes por ausencias a recuperar RD$475,000. El sistema pagó su costo anual en el primer mes."
             </p>
             <p className="text-sm text-gray-600">
               — Dra. Carmen Rodríguez, SmileCare Dental

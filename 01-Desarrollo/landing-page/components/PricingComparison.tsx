@@ -53,18 +53,18 @@ export default function PricingComparison() {
                 <th className="px-6 py-4 text-left font-semibold">Características</th>
                 <th className="px-6 py-4 text-center font-semibold">
                   <div>Free</div>
-                  <div className="text-2xl mt-1">$0</div>
+                  <div className="text-2xl mt-1">RD$0</div>
                 </th>
                 <th className="px-6 py-4 text-center font-semibold">
                   <div>Starter</div>
-                  <div className="text-2xl mt-1">$97</div>
+                  <div className="text-2xl mt-1">RD$5,500</div>
                 </th>
                 <th className="px-6 py-4 text-center font-semibold bg-white/20">
                   <div className="flex items-center justify-center gap-2">
                     <span>Professional</span>
                     <span className="bg-white/30 px-2 py-1 rounded text-xs">POPULAR</span>
                   </div>
-                  <div className="text-2xl mt-1">$197</div>
+                  <div className="text-2xl mt-1">RD$11,000</div>
                 </th>
                 <th className="px-6 py-4 text-center font-semibold">
                   <div>Enterprise</div>
@@ -158,9 +158,9 @@ export default function PricingComparison() {
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold">{plan}</h3>
                 <p className="text-3xl font-bold text-primary mt-2">
-                  {plan === "Free" && "$0"}
-                  {plan === "Starter" && "$97"}
-                  {plan === "Professional" && "$197"}
+                  {plan === "Free" && "RD$0"}
+                  {plan === "Starter" && "RD$5,500"}
+                  {plan === "Professional" && "RD$11,000"}
                   {plan === "Enterprise" && "Custom"}
                 </p>
                 {plan === "Professional" && (

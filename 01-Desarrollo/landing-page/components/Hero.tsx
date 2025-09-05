@@ -95,7 +95,7 @@ export default function Hero() {
               
               <div className="space-y-3">
                 <div className="bg-gray-100 rounded-lg p-3 max-w-[80%]">
-                  <p className="text-sm">¡Hola! Soy María 🦷 Te recuerdo tu cita mañana a las 3:00 PM con el Dr. Rodríguez</p>
+                  <p className="text-sm">¡Hola! Soy tu asistente dental 🦷. Te recuerdo tu cita mañana a las 3:00 PM con el Dr. Rodríguez</p>
                 </div>
                 
                 <motion.div
@@ -117,27 +117,6 @@ export default function Hero() {
                 </motion.div>
               </div>
             </div>
-            
-            {/* Floating stats */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1 }}
-              className="absolute -top-10 -right-10 bg-white rounded-lg shadow-lg p-4"
-            >
-              <p className="text-3xl font-bold text-secondary">93%</p>
-              <p className="text-xs text-gray-600">Precisión</p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2 }}
-              className="absolute bottom-0 -left-5 lg:-left-10 bg-white rounded-lg shadow-lg p-4 z-10"
-            >
-              <p className="text-3xl font-bold text-primary">-73%</p>
-              <p className="text-xs text-gray-600">Ausencias</p>
-            </motion.div>
           </motion.div>
         </div>
       </div>

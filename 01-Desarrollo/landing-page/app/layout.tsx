@@ -14,11 +14,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'María AI - Tu Asistente Dental Inteligente | DentalFlow AI',
-  description: 'Reduce ausencias 73% y llena tu agenda automáticamente. María AI confirma citas 24/7 por WhatsApp para clínicas dentales.',
+  title: 'DentalFlow AI - Automatización Inteligente para Clínicas Dentales',
+  description: 'Reduce ausencias 73% y llena tu agenda automáticamente. Sistema de confirmación de citas 24/7 por WhatsApp para clínicas dentales.',
   keywords: 'asistente dental, IA dental, confirmación citas, clínicas dentales, reducir ausencias, dental AI, appointment confirmation',
   openGraph: {
-    title: 'María AI - Tu Asistente Dental Inteligente',
+    title: 'DentalFlow AI - Automatización Dental Inteligente',
     description: 'Reduce ausencias 73% y llena tu agenda automáticamente',
     url: 'https://dentalflow.do',
     siteName: 'DentalFlow AI',
