@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: dentalflow-n8n
+    ports:
+      - '5678:5678'
+    volumes:
+      - ./n8n-data:/home/node/.n8n
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER:-admin}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD:-dentalflow2024}
+      - WEBHOOK_URL=${N8N_WEBHOOK_URL:-https://hooks.dentalflow.do}
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_DATABASE=dentalflow
+      - DB_POSTGRESDB_USER=admin
+      - DB_POSTGRESDB_PASSWORD=${DB_PASSWORD:-dentalflow2024}
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    container_name: dentalflow-postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: dentalflow
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-dentalflow2024}
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    container_name: dentalflow-redis
+    ports:
+      - '6379:6379'
+    volumes:
+      - ./redis-data:/data
