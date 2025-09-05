@@ -21,10 +21,10 @@ export default function CTA() {
           className="max-w-4xl mx-auto text-center text-white"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Deja de perder $7,500 cada mes
+            Reduce las pérdidas por citas perdidas
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Tu asistente dental empieza a recuperar pacientes ausentes en menos de 24 horas
+            Sistema automático que empieza a funcionar desde el primer día
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">

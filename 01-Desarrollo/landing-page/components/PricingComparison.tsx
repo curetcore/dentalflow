@@ -7,14 +7,14 @@ const comparison = [
   {
     category: "Gestión de Citas",
     without: {
-      issue: "30-40% de pacientes no se presentan",
-      impact: "RD$420,000 perdidos al mes",
+      issue: "Muchos pacientes no se presentan",
+      impact: "Pérdidas significativas cada mes",
       icon: TrendingDown,
       color: "text-red-600"
     },
     with: {
       solution: "Confirmación automática 24/7",
-      benefit: "Reduce ausencias hasta 73%",
+      benefit: "Mejora significativa en asistencia",
       icon: TrendingUp,
       color: "text-green-600"
     }
@@ -38,7 +38,7 @@ const comparison = [
     category: "Reagendamiento",
     without: {
       issue: "Espacios vacíos por cancelaciones",
-      impact: "25% menos productividad",
+      impact: "Menor productividad diaria",
       icon: X,
       color: "text-gray-600"
     },
@@ -59,7 +59,7 @@ const comparison = [
     },
     with: {
       solution: "Recordatorios programados (24h, 3h, 1h)",
-      benefit: "93% asistencia puntual",
+      benefit: "Mayor puntualidad en citas",
       icon: TrendingUp,
       color: "text-mint"
     }
@@ -68,13 +68,13 @@ const comparison = [
     category: "Reactivación de Pacientes",
     without: {
       issue: "Pacientes inactivos olvidados",
-      impact: "40% base de datos inactiva",
+      impact: "Muchos pacientes inactivos",
       icon: TrendingDown,
       color: "text-gray-500"
     },
     with: {
       solution: "Campañas automáticas de reactivación",
-      benefit: "Recupera 30% de inactivos",
+      benefit: "Reactiva pacientes olvidados",
       icon: TrendingUp,
       color: "text-accent"
     }
@@ -98,13 +98,13 @@ const comparison = [
     category: "Costo Operativo",
     without: {
       issue: "Personal dedicado a llamar",
-      impact: "RD$40,000+ en salarios",
+      impact: "Alto costo en personal",
       icon: TrendingDown,
       color: "text-red-600"
     },
     with: {
       solution: "Automatización completa",
-      benefit: "ROI de 420% en 3 meses",
+      benefit: "Retorno de inversión positivo",
       icon: TrendingUp,
       color: "text-green-600"
     }

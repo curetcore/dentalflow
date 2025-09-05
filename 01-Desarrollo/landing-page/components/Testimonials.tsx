@@ -115,8 +115,8 @@ export default function Testimonials() {
             <p className="text-gray-600">Citas confirmadas</p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-accent mb-2">73%</p>
-            <p className="text-gray-600">Reducción no-shows</p>
+            <p className="text-4xl font-bold text-accent mb-2">Mejor</p>
+            <p className="text-gray-600">Asistencia</p>
           </div>
           <div>
             <p className="text-4xl font-bold text-primary mb-2">4.8★</p>

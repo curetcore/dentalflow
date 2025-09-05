@@ -14,8 +14,16 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí iría la lógica de autenticación
-    console.log("Login attempt:", { email, password, rememberMe })
+    
+    // Verificar credenciales de prueba
+    if (email === "demo@dentalflow.ai" && password === "demo123") {
+      // Guardar autenticación simple en localStorage
+      localStorage.setItem("dentalflow_auth", "true")
+      // Redirigir al dashboard
+      window.location.href = "/dashboard/main"
+    } else {
+      alert("Credenciales incorrectas. Usa las credenciales de demo mostradas abajo.")
+    }
   }
 
   return (
@@ -205,7 +213,7 @@ export default function LoginPage() {
               <ul className="space-y-4">
                 {[
                   'Dashboard en tiempo real',
-                  'Predicciones de IA precisas',
+                  'Reportes detallados',
                   'Comunicación automatizada',
                   'Análisis de rendimiento'
                 ].map((feature, index) => (
@@ -234,7 +242,7 @@ export default function LoginPage() {
                   <span className="text-sm text-gray-600">
                     Clínicas activas
                   </span>
-                  <span className="text-2xl font-bold text-primary">2,500+</span>
+                  <span className="text-2xl font-bold text-primary">50+</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                   <motion.div

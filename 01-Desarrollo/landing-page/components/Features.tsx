@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Aumenta ingresos +40%",
-    description: "Llena espacios cancelados instantáneamente",
+    title: "Optimiza tu agenda",
+    description: "Llena espacios cancelados de forma eficiente",
     color: "text-accent"
   },
   {
@@ -36,8 +36,8 @@ const features = [
   },
   {
     icon: Clock,
-    title: "Resultados rápidos",
-    description: "Mejora visible en asistencia desde la primera semana",
+    title: "Implementación rápida",
+    description: "Sistema funcionando desde el primer día",
     color: "text-accent"
   }
 ]

@@ -48,7 +48,7 @@ const plans = [
     cta: "Empezar 1 Mes Gratis",
     featured: false,
     urgency: "Ahorra 50% primeros 3 meses",
-    savings: "Reduce hasta 25% las ausencias",
+    savings: "Mejora la asistencia de pacientes",
     included: ["patients", "confirmations", "reminders", "dashboard", "users", "support", "guarantee"],
     limits: {
       patients: "500",
@@ -68,7 +68,7 @@ const plans = [
     cta: "Empezar 1 Mes Gratis",
     featured: true,
     urgency: "⚡ Precio de lanzamiento - Primeros 100 clientes",
-    savings: "Reduce hasta 40% las ausencias",
+    savings: "Maximiza la asistencia de pacientes",
     bonus: "🎁 GRATIS: Setup RD$56,000 + 2 meses extra",
     included: ["patients", "confirmations", "sms", "reminders", "ai", "reactivation", "reviews", "dashboard", "api", "users", "support", "guarantee", "setup", "training"],
     limits: {
@@ -106,10 +106,10 @@ export default function Pricing() {
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Deja de perder RD$420,000 al mes
+            Planes que se adaptan a tu clínica
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 mb-4">
-            Las clínicas pierden hasta 40 pacientes mensuales por falta de seguimiento
+            Elige el plan ideal según el tamaño de tu práctica
           </p>
           <p className="text-lg text-gray-500">
             Con DentalFlow recuperas esos pacientes desde el día 1
@@ -241,7 +241,7 @@ export default function Pricing() {
                   />
                 ))}
               </div>
-              <span>+2,347 clínicas activas</span>
+              <span>Más de 50 clínicas activas</span>
             </div>
             
             <div className="flex items-center gap-1">
@@ -253,7 +253,7 @@ export default function Pricing() {
           </div>
 
           <p className="text-lg font-semibold text-gray-800">
-            ⚡ 12 clínicas más se unieron en las últimas 2 horas
+            🌟 Únete a las clínicas que ya confían en DentalFlow
           </p>
         </motion.div>
       </div>
