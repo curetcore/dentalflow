@@ -15,9 +15,8 @@ export default function Hero() {
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary to-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-mint to-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-bl from-accent to-lavender rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-mint/30 to-secondary/30 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -40,9 +39,9 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-primary via-secondary to-mint text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all hover:scale-105 flex items-center"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-gradient-to-r from-primary via-secondary to-mint text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all flex items-center justify-center"
                 onClick={() => setShowDemo(true)}
               >
                 Prueba Gratis 1 Mes
@@ -51,8 +50,8 @@ export default function Hero() {
               
               <motion.a
                 href="#demo"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/5 transition text-center"
               >
                 Ver Demo
@@ -134,7 +133,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.2 }}
-              className="absolute -bottom-10 -left-10 bg-white rounded-lg shadow-lg p-4"
+              className="absolute bottom-0 -left-5 lg:-left-10 bg-white rounded-lg shadow-lg p-4 z-10"
             >
               <p className="text-3xl font-bold text-primary">-73%</p>
               <p className="text-xs text-gray-600">Ausencias</p>

@@ -44,24 +44,24 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             María AI hace el trabajo pesado
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600">
             Mientras tú atiendes pacientes, María gestiona toda la comunicación y optimiza tu agenda
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -70,11 +70,13 @@ export default function Features() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all"
+              className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 h-full flex flex-col"
             >
-              <feature.icon className={`w-12 h-12 ${feature.color} mb-4`} />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6">
+                <feature.icon className={`w-8 h-8 ${feature.color}`} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+              <p className="text-gray-600 flex-grow">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -85,7 +87,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-20 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12"
+          className="mt-24 bg-gradient-to-r from-primary/5 via-mint/5 to-secondary/5 rounded-3xl p-10 md:p-16 max-w-6xl mx-auto"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>

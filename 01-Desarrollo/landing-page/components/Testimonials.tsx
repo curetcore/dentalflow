@@ -35,24 +35,24 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-white">
+    <section id="testimonials" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Clínicas que confían en María
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
             Más de 50 clínicas en RD ya transformaron su práctica con María AI
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -60,7 +60,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-2xl p-6 relative"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative h-full flex flex-col"
             >
               <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/20" />
               
@@ -83,7 +83,11 @@ export default function Testimonials() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gray-300 rounded-full" />
+                <img 
+                  src={`https://picsum.photos/seed/dental${index + 100}/200/200`}
+                  alt={testimonial.name}
+                  className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
+                />
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-600">{testimonial.clinic}</p>
