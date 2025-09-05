@@ -2,58 +2,61 @@
 
 import { motion } from "framer-motion"
 import { Check, Star } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
-const plans = [
+export default function Pricing() {
+  const { t, language } = useLanguage()
+
+  const plans = [
   {
     name: "Starter",
     price: "RD$12,000",
     period: t.pricing.monthly,
-    description: "Perfecto para clínicas pequeñas",
+    description: language === 'es' ? "Perfecto para clínicas pequeñas" : "Perfect for small clinics",
     features: [
-      "Hasta 500 pacientes",
-      "Confirmaciones automáticas",
+      t.pricing.features.patients,
+      t.pricing.features.confirmations,
       "WhatsApp Business",
-      "Dashboard básico",
-      "Soporte por email"
+      language === 'es' ? "Dashboard básico" : "Basic dashboard",
+      language === 'es' ? "Soporte por email" : "Email support"
     ],
-    cta: "Empezar gratis",
+    cta: t.navbar.startTrial,
     featured: false
   },
   {
     name: "Professional",
     price: "RD$25,000",
     period: t.pricing.monthly,
-    description: "La elección de clínicas en crecimiento",
+    description: language === 'es' ? "La elección de clínicas en crecimiento" : "The choice for growing clinics",
     features: [
-      "Pacientes ilimitados",
-      "IA predictiva avanzada",
-      "Multi-canal (WhatsApp + SMS)",
-      "Analytics completo",
-      "API personalizada",
-      "Soporte prioritario 24/7"
+      t.pricing.features.unlimited,
+      t.pricing.features.predictions,
+      t.pricing.features.multichannel,
+      t.pricing.features.analytics,
+      t.pricing.features.api,
+      language === 'es' ? "Soporte prioritario 24/7" : "24/7 priority support"
     ],
-    cta: "Prueba 14 días",
+    cta: language === 'es' ? "Prueba 14 días" : "Try 14 days",
     featured: true
   },
   {
     name: "Enterprise",
     price: "RD$45,000",
     period: t.pricing.monthly,
-    description: "Para cadenas y multi-sucursal",
+    description: language === 'es' ? "Para cadenas y multi-sucursal" : "For chains and multi-location",
     features: [
-      "Todo en Professional",
-      "Multi-sucursal",
-      "Manager dedicado",
-      "Integraciones custom",
-      "Training on-site",
-      "SLA garantizado"
+      language === 'es' ? "Todo en Professional" : "Everything in Professional",
+      t.pricing.features.multiLocation,
+      t.pricing.features.dedicatedManager,
+      t.pricing.features.customIntegrations,
+      t.pricing.features.onsite,
+      t.pricing.features.sla
     ],
-    cta: "Contactar ventas",
+    cta: language === 'es' ? "Contactar ventas" : "Contact sales",
     featured: false
   }
-]
+  ]
 
-export default function Pricing() {
   return (
     <section id="pricing" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -65,10 +68,10 @@ export default function Pricing() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Precios simples, ROI garantizado
+            {t.pricing.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            María se paga sola. En promedio, nuestras clínicas recuperan la inversión en 3 semanas
+            {t.pricing.subtitle}
           </p>
         </motion.div>
 
@@ -88,7 +91,7 @@ export default function Pricing() {
               {plan.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
                   <Star className="w-4 h-4" />
-                  Más popular
+                  {t.pricing.popular}
                 </div>
               )}
 
