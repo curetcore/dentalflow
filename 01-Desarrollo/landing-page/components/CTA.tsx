@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Calendar, CheckCircle } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function CTA() {
+  const { t } = useLanguage()
   return (
     <section className="py-20 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
       {/* Background pattern */}
@@ -21,10 +23,10 @@ export default function CTA() {
           className="max-w-4xl mx-auto text-center text-white"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Empieza a reducir ausencias hoy mismo
+            {t.cta.title}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            María puede estar trabajando en tu clínica en menos de 24 horas
+            {t.cta.subtitle}
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
@@ -33,8 +35,8 @@ export default function CTA() {
               className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
             >
               <Calendar className="w-8 h-8 mb-3 mx-auto" />
-              <p className="font-semibold">14 días gratis</p>
-              <p className="text-sm opacity-80">Sin tarjeta de crédito</p>
+              <p className="font-semibold">{t.cta.freeTrialDays}</p>
+              <p className="text-sm opacity-80">{t.cta.noCreditCard}</p>
             </motion.div>
             
             <motion.div
@@ -42,8 +44,8 @@ export default function CTA() {
               className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
             >
               <CheckCircle className="w-8 h-8 mb-3 mx-auto" />
-              <p className="font-semibold">Setup en 24h</p>
-              <p className="text-sm opacity-80">Nosotros lo hacemos</p>
+              <p className="font-semibold">{t.cta.setupTime}</p>
+              <p className="text-sm opacity-80">{t.cta.setupDescription}</p>
             </motion.div>
             
             <motion.div
@@ -51,8 +53,8 @@ export default function CTA() {
               className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
             >
               <ArrowRight className="w-8 h-8 mb-3 mx-auto" />
-              <p className="font-semibold">Resultados día 1</p>
-              <p className="text-sm opacity-80">María empieza de inmediato</p>
+              <p className="font-semibold">{t.cta.resultsDay1}</p>
+              <p className="text-sm opacity-80">{t.cta.resultsDescription}</p>
             </motion.div>
           </div>
 
@@ -62,7 +64,7 @@ export default function CTA() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
             >
-              Activar prueba gratis
+              {t.cta.startFreeTrial}
               <ArrowRight className="w-5 h-5" />
             </motion.button>
             
@@ -74,12 +76,12 @@ export default function CTA() {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition text-center"
             >
-              Hablar con ventas
+              {t.cta.talkToSales}
             </motion.a>
           </div>
 
           <p className="mt-6 text-sm opacity-80">
-            ¿Preguntas? WhatsApp: (809) 555-1234 · Lun-Vie 9AM-6PM
+            {t.cta.questions} WhatsApp: (809) 555-1234 · {t.cta.hours}
           </p>
         </motion.div>
       </div>

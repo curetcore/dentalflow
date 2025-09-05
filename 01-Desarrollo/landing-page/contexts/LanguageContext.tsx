@@ -99,6 +99,36 @@ interface Translations {
       sla: string
     }
   }
+  cta: {
+    title: string
+    subtitle: string
+    freeTrialDays: string
+    noCreditCard: string
+    setupTime: string
+    setupDescription: string
+    resultsDay1: string
+    resultsDescription: string
+    startFreeTrial: string
+    talkToSales: string
+    questions: string
+    hours: string
+  }
+  footer: {
+    tagline: string
+    product: string
+    features: string
+    pricing: string
+    success: string
+    support: string
+    docs: string
+    faq: string
+    contact: string
+    contactTitle: string
+    monday: string
+    rights: string
+    privacy: string
+    terms: string
+  }
 }
 
 const translations: Record<Language, Translations> = {
@@ -196,6 +226,36 @@ const translations: Record<Language, Translations> = {
         onsite: "Training on-site",
         sla: "SLA garantizado"
       }
+    },
+    cta: {
+      title: "Empieza a reducir ausencias hoy mismo",
+      subtitle: "María puede estar trabajando en tu clínica en menos de 24 horas",
+      freeTrialDays: "14 días gratis",
+      noCreditCard: "Sin tarjeta de crédito",
+      setupTime: "Setup en 24h",
+      setupDescription: "Nosotros lo hacemos",
+      resultsDay1: "Resultados día 1",
+      resultsDescription: "María empieza de inmediato",
+      startFreeTrial: "Activar prueba gratis",
+      talkToSales: "Hablar con ventas",
+      questions: "¿Preguntas?",
+      hours: "Lun-Vie 9AM-6PM"
+    },
+    footer: {
+      tagline: "Transformando clínicas dentales con inteligencia artificial en República Dominicana",
+      product: "Producto",
+      features: "Características",
+      pricing: "Precios",
+      success: "Casos de éxito",
+      support: "Soporte",
+      docs: "Documentación",
+      faq: "Preguntas frecuentes",
+      contact: "Contacto",
+      contactTitle: "Contacto",
+      monday: "Lun-Vie: 9AM-6PM",
+      rights: "Todos los derechos reservados.",
+      privacy: "Privacidad",
+      terms: "Términos"
     }
   },
   en: {
@@ -292,6 +352,36 @@ const translations: Record<Language, Translations> = {
         onsite: "On-site training",
         sla: "Guaranteed SLA"
       }
+    },
+    cta: {
+      title: "Start reducing no-shows today",
+      subtitle: "Maria can be working in your clinic in less than 24 hours",
+      freeTrialDays: "14-day free trial",
+      noCreditCard: "No credit card required",
+      setupTime: "Setup in 24h",
+      setupDescription: "We do it for you",
+      resultsDay1: "Results on day 1",
+      resultsDescription: "Maria starts immediately",
+      startFreeTrial: "Start free trial",
+      talkToSales: "Talk to sales",
+      questions: "Questions?",
+      hours: "Mon-Fri 9AM-6PM"
+    },
+    footer: {
+      tagline: "Transforming dental clinics with artificial intelligence",
+      product: "Product",
+      features: "Features",
+      pricing: "Pricing",
+      success: "Success Stories",
+      support: "Support",
+      docs: "Documentation",
+      faq: "FAQ",
+      contact: "Contact",
+      contactTitle: "Contact",
+      monday: "Mon-Fri: 9AM-6PM",
+      rights: "All rights reserved.",
+      privacy: "Privacy",
+      terms: "Terms"
     }
   }
 }

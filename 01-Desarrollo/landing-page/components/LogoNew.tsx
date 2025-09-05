@@ -22,40 +22,50 @@ export default function LogoNew({ className = "h-10 md:h-12 w-auto" }: { classNa
         </linearGradient>
       </defs>
       
-      {/* Modern stylized tooth */}
-      <path
-        d="M30 12C26 12 22 15 22 19C22 20.5 22 22 20.5 23.5C19 25 19 28 20.5 31C22 34 23.5 35.5 25.5 35.5C27 35.5 28 34 29 31C30 28 30 28 31 31C32 34 33 35.5 34.5 35.5C36.5 35.5 38 34 39.5 31C41 28 41 25 39.5 23.5C38 22 38 20.5 38 19C38 15 34 12 30 12Z"
-        fill="url(#toothGradient)"
-      />
+      {/* Realistic molar tooth design */}
+      <g transform="translate(30, 30)">
+        <path
+          d="M0 -15 C-4 -15 -8 -13 -8 -8 C-8 -5 -8 -3 -10 -1 C-11 1 -11 4 -10 8 C-8 12 -6 14 -3 14 C-1 14 0 12 0 9 C0 9 0 12 0 9 C0 12 1 14 3 14 C6 14 8 12 10 8 C11 4 11 1 10 -1 C8 -3 8 -5 8 -8 C8 -13 4 -15 0 -15 Z M-4 -8 C-4 -10 -2 -11 0 -11 C2 -11 4 -10 4 -8 C4 -6 3 -5 2 -5 C1 -5 -1 -5 -2 -5 C-3 -5 -4 -6 -4 -8 Z"
+          fill="url(#toothGradient)"
+        />
+        {/* Tooth roots */}
+        <path
+          d="M-3 14 C-3 14 -3 18 -3 18 M3 14 C3 14 3 18 3 18"
+          stroke="url(#toothGradient)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+      </g>
       
-      {/* AI glow effect */}
-      <circle cx="30" cy="24" r="4" fill="#FCD34D" opacity="0.9">
-        <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite" />
+      {/* AI glow effect (smaller and positioned better) */}
+      <circle cx="30" cy="25" r="2.5" fill="#FCD34D" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite" />
       </circle>
       
       {/* Center AI dot */}
-      <circle cx="30" cy="24" r="2.5" fill="#F59E0B" />
+      <circle cx="30" cy="25" r="1.5" fill="#F59E0B" />
       
       {/* Text: DentalFlow */}
-      <text x="60" y="28" fontFamily="system-ui, -apple-system, sans-serif" fontSize="24" fontWeight="700" fill="#1F2937">
+      <text x="60" y="32" fontFamily="system-ui, -apple-system, sans-serif" fontSize="24" fontWeight="700" fill="#1F2937">
         DentalFlow
       </text>
       
-      {/* AI badge */}
-      <rect x="195" y="16" width="35" height="24" rx="12" fill="url(#logoGradient)" />
-      <text x="213" y="31" fontFamily="system-ui, -apple-system, sans-serif" fontSize="14" fontWeight="600" fill="white" textAnchor="middle">
+      {/* AI badge - positioned better to avoid overlap */}
+      <rect x="190" y="20" width="28" height="18" rx="9" fill="url(#logoGradient)" />
+      <text x="204" y="32" fontFamily="system-ui, -apple-system, sans-serif" fontSize="11" fontWeight="600" fill="white" textAnchor="middle">
         AI
       </text>
       
       {/* Tagline */}
-      <text x="60" y="42" fontFamily="system-ui, -apple-system, sans-serif" fontSize="11" fill="#6B7280" fontWeight="500">
-        Intelligent Dental Assistant
+      <text x="60" y="46" fontFamily="system-ui, -apple-system, sans-serif" fontSize="11" fill="#6B7280" fontWeight="500">
+        Asistente Dental Inteligente
       </text>
       
       {/* Decorative dots */}
-      <circle cx="60" cy="48" r="1" fill="#0EA5E9" opacity="0.5" />
-      <circle cx="65" cy="48" r="1" fill="#06B6D4" opacity="0.5" />
-      <circle cx="70" cy="48" r="1" fill="#10B981" opacity="0.5" />
+      <circle cx="60" cy="52" r="1" fill="#0EA5E9" opacity="0.5" />
+      <circle cx="65" cy="52" r="1" fill="#06B6D4" opacity="0.5" />
+      <circle cx="70" cy="52" r="1" fill="#10B981" opacity="0.5" />
     </svg>
   )
 }

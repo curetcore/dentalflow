@@ -7,7 +7,7 @@ const plans = [
   {
     name: "Starter",
     price: "RD$12,000",
-    period: "/mes",
+    period: t.pricing.monthly,
     description: "Perfecto para clínicas pequeñas",
     features: [
       "Hasta 500 pacientes",
@@ -22,7 +22,7 @@ const plans = [
   {
     name: "Professional",
     price: "RD$25,000",
-    period: "/mes",
+    period: t.pricing.monthly,
     description: "La elección de clínicas en crecimiento",
     features: [
       "Pacientes ilimitados",
@@ -38,7 +38,7 @@ const plans = [
   {
     name: "Enterprise",
     price: "RD$45,000",
-    period: "/mes",
+    period: t.pricing.monthly,
     description: "Para cadenas y multi-sucursal",
     features: [
       "Todo en Professional",
