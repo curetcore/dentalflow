@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, CheckCircle } from "lucide-react"
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-primary via-secondary to-mint relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl" />
@@ -33,7 +33,7 @@ export default function CTA() {
               className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
             >
               <Calendar className="w-8 h-8 mb-3 mx-auto" />
-              <p className="font-semibold">14 días gratis</p>
+              <p className="font-semibold">1 mes gratis</p>
               <p className="text-sm opacity-80">Sin tarjeta de crédito</p>
             </motion.div>
             

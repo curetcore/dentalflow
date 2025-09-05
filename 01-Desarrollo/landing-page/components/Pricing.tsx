@@ -5,6 +5,33 @@ import { Check, Star, Zap, Users, BarChart, Shield, Headphones, Globe, X } from 
 
 const plans = [
   {
+    name: "Free",
+    price: "$0",
+    originalPrice: "",
+    period: "/mes",
+    description: "Prueba el poder de María AI",
+    savings: "GRATIS para siempre",
+    features: [
+      "Hasta 50 pacientes activos",
+      "25 confirmaciones por mes",
+      "Recordatorios solo 24h antes",
+      "Dashboard básico",
+      "1 usuario",
+      "Marca de agua DentalFlow",
+      "Soporte por comunidad"
+    ],
+    notIncluded: [
+      "SMS",
+      "Campañas de reactivación",
+      "Predicciones IA avanzadas",
+      "Personalización"
+    ],
+    cta: "Empezar Gratis",
+    featured: false,
+    icon: Zap,
+    badge: "NUEVO"
+  },
+  {
     name: "Starter",
     price: "$97",
     originalPrice: "$197",
@@ -26,9 +53,9 @@ const plans = [
       "API personalizada",
       "Multi-sucursal"
     ],
-    cta: "Empezar Prueba Gratis",
+    cta: "Prueba 1 Mes Gratis",
     featured: false,
-    icon: Zap
+    icon: Users
   },
   {
     name: "Professional",
@@ -51,7 +78,7 @@ const plans = [
       "Garantía: -73% ausencias o te devolvemos el dinero"
     ],
     notIncluded: [],
-    cta: "Empezar 14 Días Gratis",
+    cta: "Empezar 1 Mes Gratis",
     featured: true,
     bonus: "🎁 BONUS: Setup profesional GRATIS (valor $500)",
     icon: Users
@@ -84,7 +111,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="pricing" className="py-20 bg-gradient-to-b from-gray-50 via-white to-primary/5">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -134,13 +161,13 @@ export default function Pricing() {
               }`}
             >
               {plan.featured && (
-                <div className="absolute -top-5 -right-20 bg-gradient-to-r from-primary to-secondary text-white px-20 py-1 rotate-12 text-sm font-bold">
+                <div className="absolute -top-5 -right-20 bg-gradient-to-r from-primary via-secondary to-mint text-white px-20 py-1 rotate-12 text-sm font-bold">
                   MÁS POPULAR
                 </div>
               )}
               
               {plan.savings && (
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-center py-2 text-sm font-medium">
+                <div className="bg-gradient-to-r from-mint to-primary text-white text-center py-2 text-sm font-medium">
                   {plan.savings}
                 </div>
               )}
@@ -188,7 +215,7 @@ export default function Pricing() {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${
                     plan.featured
-                      ? 'bg-gradient-to-r from-primary via-cyan-500 to-secondary text-white hover:shadow-xl'
+                      ? 'bg-gradient-to-r from-primary via-secondary to-mint text-white hover:shadow-xl hover:shadow-primary/20'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -211,7 +238,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-20 bg-gradient-to-r from-primary/5 via-cyan-500/5 to-secondary/5 rounded-3xl p-8 max-w-4xl mx-auto"
+          className="mt-20 bg-gradient-to-r from-primary/5 via-mint/5 to-secondary/5 rounded-3xl p-8 max-w-4xl mx-auto"
         >
           <h3 className="text-2xl font-bold mb-6 text-center">
             ¿Por qué el 87% elige Professional?
@@ -219,15 +246,15 @@ export default function Pricing() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">73%</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">73%</div>
               <p className="text-gray-600">Reducción garantizada de ausencias</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">$7,500</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-mint bg-clip-text text-transparent mb-2">$7,500</div>
               <p className="text-gray-600">Recuperados en promedio al mes</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">2 semanas</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-secondary to-mint bg-clip-text text-transparent mb-2">2 semanas</div>
               <p className="text-gray-600">Tiempo promedio de ROI</p>
             </div>
           </div>

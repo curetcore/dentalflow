@@ -2,15 +2,12 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Globe } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import LogoNew from "./LogoNew"
-import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function NavbarNew() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [showLangMenu, setShowLangMenu] = useState(false)
-  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +18,10 @@ export default function NavbarNew() {
   }, [])
 
   const navItems = [
-    { href: "#features", label: t.navbar.features },
-    { href: "#testimonials", label: t.navbar.testimonials },
-    { href: "#pricing", label: t.navbar.pricing },
-    { href: "#demo", label: t.navbar.demo },
+    { href: "#features", label: "Características" },
+    { href: "#testimonials", label: "Testimonios" },
+    { href: "#pricing", label: "Precios" },
+    { href: "#demo", label: "Demo" },
   ]
 
   return (
@@ -48,90 +45,58 @@ export default function NavbarNew() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item, index) => (
-              <motion.a
-                key={item.href}
-                href={item.href}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-gray-700 hover:text-primary font-medium transition-all hover:scale-105"
+            <motion.div
+              className="flex items-center gap-8"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={`font-medium transition-all hover:text-primary ${
+                    isScrolled ? "text-gray-700" : "text-gray-900"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-4"
+            >
+              <a
+                href="/dashboard"
+                className="px-4 py-2 text-primary border-2 border-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300"
               >
-                {item.label}
-              </motion.a>
-            ))}
-            
-            {/* Language Selector */}
-            <div className="relative">
-              <motion.button
+                Iniciar Sesión
+              </a>
+              <motion.a
+                href="#pricing"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setShowLangMenu(!showLangMenu)}
-                className="flex items-center gap-2 text-gray-700 hover:text-primary font-medium transition-all"
+                className="px-6 py-2 bg-gradient-to-r from-primary via-secondary to-mint text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300"
               >
-                <Globe className="w-5 h-5" />
-                {language.toUpperCase()}
-              </motion.button>
-              
-              <AnimatePresence>
-                {showLangMenu && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden"
-                  >
-                    <button
-                      onClick={() => {
-                        setLanguage('es')
-                        setShowLangMenu(false)
-                      }}
-                      className={`block w-full px-4 py-2 text-left hover:bg-gray-50 ${
-                        language === 'es' ? 'bg-primary/10 text-primary' : ''
-                      }`}
-                    >
-                      🇩🇴 Español
-                    </button>
-                    <button
-                      onClick={() => {
-                        setLanguage('en')
-                        setShowLangMenu(false)
-                      }}
-                      className={`block w-full px-4 py-2 text-left hover:bg-gray-50 ${
-                        language === 'en' ? 'bg-primary/10 text-primary' : ''
-                      }`}
-                    >
-                      🇺🇸 English
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            
-            <motion.button
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="relative bg-gradient-to-r from-primary via-cyan-500 to-secondary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition-all overflow-hidden group"
-            >
-              <span className="relative z-10">{t.navbar.startTrial}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary via-cyan-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </motion.button>
+                Prueba 1 Mes Gratis
+              </motion.a>
+            </motion.div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
-            )}
-          </button>
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -142,51 +107,35 @@ export default function NavbarNew() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t"
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100"
           >
-            <div className="container mx-auto px-4 py-6 space-y-4">
-              {navItems.map((item) => (
-                <motion.a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  whileHover={{ x: 10 }}
-                  className="block py-3 text-gray-700 hover:text-primary font-medium transition-all"
-                >
-                  {item.label}
-                </motion.a>
-              ))}
-              
-              {/* Mobile Language Selector */}
-              <div className="py-3 space-y-2">
-                <p className="text-sm text-gray-500 font-medium">Idioma / Language</p>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setLanguage('es')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                      language === 'es' 
-                        ? 'bg-primary text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
+            <div className="container mx-auto px-4 py-6">
+              <div className="flex flex-col gap-4">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-gray-700 font-medium hover:text-primary transition-colors py-2"
                   >
-                    🇩🇴 ES
-                  </button>
-                  <button
-                    onClick={() => setLanguage('en')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                      language === 'en' 
-                        ? 'bg-primary text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
+                    {item.label}
+                  </a>
+                ))}
+                <div className="border-t border-gray-200 pt-4 space-y-3">
+                  <a
+                    href="/dashboard"
+                    className="block w-full text-center px-6 py-3 text-primary border-2 border-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all"
                   >
-                    🇺🇸 EN
-                  </button>
+                    Iniciar Sesión
+                  </a>
+                  <a
+                    href="#pricing"
+                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-primary via-secondary to-mint text-white rounded-full font-medium shadow-lg"
+                  >
+                    Prueba 1 Mes Gratis
+                  </a>
                 </div>
               </div>
-              
-              <button className="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-4 rounded-full font-semibold shadow-lg">
-                {t.navbar.startTrial}
-              </button>
             </div>
           </motion.div>
         )}

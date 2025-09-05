@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const plusJakarta = Plus_Jakarta_Sans({ 
+  subsets: ['latin'],
+  variable: '--font-plus-jakarta',
+  weight: ['300', '400', '500', '600', '700', '800']
+})
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter' 
+})
 
 export const metadata: Metadata = {
   title: 'María AI - Tu Asistente Dental Inteligente | DentalFlow AI',
@@ -25,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={`${plusJakarta.variable} ${inter.variable} font-sans`}>
         {children}
       </body>
     </html>

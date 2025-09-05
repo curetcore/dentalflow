@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#0EA5E9',
-        secondary: '#10B981',
-        accent: '#FCD34D',
+        primary: '#00A6FB',    // Dental blue (más vibrante)
+        secondary: '#00D9FF',  // Cyan brillante (higiene)
+        accent: '#7209B7',     // Púrpura (tecnología)
+        mint: '#4ECDC4',       // Menta (frescura dental)
+        pearl: '#F8F9FA',      // Blanco perla (dientes)
+        lavender: '#E0AAFF',   // Lavanda suave
+        coral: '#FF6B6B',      // Coral (encías saludables)
       },
       animation: {
         'fade-up': 'fadeUp 0.5s ease-out',

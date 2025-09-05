@@ -7,6 +7,26 @@
     --primary: 201 96% 32%;
     --secondary: 142 71% 45%;
     --accent: 46 97% 64%;
+    --font-plus-jakarta: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-plus-jakarta);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-plus-jakarta);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  .font-display {
+    font-family: var(--font-plus-jakarta);
   }
 }
 

@@ -11,13 +11,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
       {/* Modern gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-primary/5 to-mint/10" />
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-emerald-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-bl from-indigo-400 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary to-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-mint to-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-bl from-accent to-lavender rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -30,7 +30,7 @@ export default function Hero() {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Transform Your
-              <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dental Practice</span>
+              <span className="block bg-gradient-to-r from-primary to-mint bg-clip-text text-transparent">Dental Practice</span>
               with AI Assistant
             </h1>
             
@@ -42,10 +42,10 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-primary to-primary/90 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center"
+                className="group bg-gradient-to-r from-primary via-secondary to-mint text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all hover:scale-105 flex items-center"
                 onClick={() => setShowDemo(true)}
               >
-                Start Free 14-Day Trial
+                Prueba Gratis 1 Mes
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
