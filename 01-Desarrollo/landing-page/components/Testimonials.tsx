@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
-import SectionDivider from "./SectionDivider"
 
 const testimonials = [
   {
@@ -36,7 +35,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 bg-gradient-to-b from-gray-50 to-white relative">
+    <section id="testimonials" className="pb-24 bg-white relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -125,12 +124,6 @@ export default function Testimonials() {
           </div>
         </motion.div>
       </div>
-      
-      {/* Top divider */}
-      <SectionDivider type="wave" color="#F9FAFB" flip={true} />
-      
-      {/* Bottom divider */}
-      <SectionDivider type="tilt" color="#FFFFFF" />
     </section>
   )
 }

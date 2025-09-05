@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Check, X, TrendingDown, TrendingUp, AlertTriangle } from "lucide-react"
-import SectionDivider from "./SectionDivider"
 
 const comparison = [
   {
@@ -114,7 +113,7 @@ const comparison = [
 
 export default function PricingComparison() {
   return (
-    <section className="py-20 bg-gray-50 relative">
+    <section className="pb-20 bg-white relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -269,9 +268,6 @@ export default function PricingComparison() {
           </div>
         </motion.div>
       </div>
-      
-      {/* Section divider */}
-      <SectionDivider type="wave" color="#FFFFFF" />
     </section>
   )
 }

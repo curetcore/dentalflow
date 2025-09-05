@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { MessageCircle, Calendar, TrendingUp, ArrowRight, CheckCircle } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
-import SectionDivider from "./SectionDivider"
 
 export default function Hero() {
   const [showDemo, setShowDemo] = useState(false)
@@ -12,12 +11,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
       {/* Modern gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/5" />
+      <div className="absolute inset-0 bg-white" />
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-mint/30 to-secondary/30 rounded-full blur-3xl" />
+        <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-mint/10 to-secondary/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -330,8 +329,6 @@ export default function Hero() {
         </motion.div>
       )}
       
-      {/* Section divider */}
-      <SectionDivider type="wave-opacity" color="#FFFFFF" />
     </section>
   )
 }
