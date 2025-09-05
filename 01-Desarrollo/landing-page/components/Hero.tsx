@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
       {/* Modern gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-primary/5 to-mint/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50/30" />
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
@@ -28,13 +28,13 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Transform Your
-              <span className="block bg-gradient-to-r from-primary to-mint bg-clip-text text-transparent">Dental Practice</span>
-              with AI Assistant
+              Transforma tu
+              <span className="block bg-gradient-to-r from-primary to-mint bg-clip-text text-transparent">Clínica Dental</span>
+              con IA Asistente
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Reduce no-shows by <span className="font-bold text-secondary">73%</span> and maximize your schedule with intelligent automation
+              Reduce ausencias en <span className="font-bold text-secondary">73%</span> y maximiza tu agenda con automatización inteligente
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

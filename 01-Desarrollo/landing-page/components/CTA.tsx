@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, CheckCircle } from "lucide-react"
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-secondary to-mint relative overflow-hidden">
+    <section className="py-20 bg-primary relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl" />
@@ -60,7 +60,7 @@ export default function CTA() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
+              className="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
             >
               Activar prueba gratis
               <ArrowRight className="w-5 h-5" />
@@ -72,7 +72,7 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition text-center"
+              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition text-center"
             >
               Hablar con ventas
             </motion.a>

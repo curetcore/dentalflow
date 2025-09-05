@@ -238,7 +238,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-20 bg-gradient-to-r from-primary/5 via-mint/5 to-secondary/5 rounded-3xl p-8 max-w-4xl mx-auto"
+          className="mt-20 bg-blue-50 rounded-3xl p-8 max-w-4xl mx-auto"
         >
           <h3 className="text-2xl font-bold mb-6 text-center">
             ¿Por qué el 87% elige Professional?

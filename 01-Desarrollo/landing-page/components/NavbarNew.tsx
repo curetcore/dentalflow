@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import LogoNew from "./LogoNew"
+import TextLogo from "./TextLogo"
 
 export default function NavbarNew() {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +40,7 @@ export default function NavbarNew() {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <LogoNew className="h-10 md:h-14 w-auto" />
+            <TextLogo />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -72,7 +72,7 @@ export default function NavbarNew() {
             >
               <a
                 href="/dashboard"
-                className="px-4 py-2 text-primary border-2 border-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300"
+                className="px-4 py-2 text-gray-700 border-2 border-gray-300 rounded-full font-medium hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
               >
                 Iniciar Sesión
               </a>
@@ -80,7 +80,7 @@ export default function NavbarNew() {
                 href="#pricing"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 bg-gradient-to-r from-primary via-secondary to-mint text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300"
+                className="px-6 py-2 bg-primary text-white rounded-full font-medium shadow-md hover:bg-primary/90 hover:shadow-lg transition-all duration-300"
               >
                 Prueba 1 Mes Gratis
               </motion.a>
@@ -124,13 +124,13 @@ export default function NavbarNew() {
                 <div className="border-t border-gray-200 pt-4 space-y-3">
                   <a
                     href="/dashboard"
-                    className="block w-full text-center px-6 py-3 text-primary border-2 border-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all"
+                    className="block w-full text-center px-6 py-3 text-gray-700 border-2 border-gray-300 rounded-full font-medium hover:border-gray-400 hover:bg-gray-50 transition-all"
                   >
                     Iniciar Sesión
                   </a>
                   <a
                     href="#pricing"
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-primary via-secondary to-mint text-white rounded-full font-medium shadow-lg"
+                    className="block w-full text-center px-6 py-3 bg-primary text-white rounded-full font-medium shadow-md hover:bg-primary/90"
                   >
                     Prueba 1 Mes Gratis
                   </a>

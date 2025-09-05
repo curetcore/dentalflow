@@ -49,7 +49,7 @@ export default function PricingComparison() {
             className="w-full bg-white rounded-2xl shadow-lg overflow-hidden"
           >
             <thead>
-              <tr className="bg-gradient-to-r from-primary via-secondary to-mint text-white">
+              <tr className="bg-primary text-white">
                 <th className="px-6 py-4 text-left font-semibold">Características</th>
                 <th className="px-6 py-4 text-center font-semibold">
                   <div>Free</div>
@@ -123,7 +123,7 @@ export default function PricingComparison() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="bg-gradient-to-r from-primary via-secondary to-mint text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+                    className="bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-primary/90 hover:shadow-lg transition-all"
                   >
                     Empezar Ahora
                   </motion.button>

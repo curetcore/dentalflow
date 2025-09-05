@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Lock, Eye, EyeOff, ArrowLeft } from "lucide-react"
 import Link from "next/link"
-import LogoNew from "@/components/LogoNew"
+import TextLogo from "@/components/TextLogo"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -38,7 +38,7 @@ export default function LoginPage() {
 
           {/* Logo */}
           <div className="flex justify-center">
-            <LogoNew className="h-14 w-auto" />
+            <TextLogo />
           </div>
 
           {/* Header */}
@@ -138,7 +138,7 @@ export default function LoginPage() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-xl text-white bg-gradient-to-r from-primary via-secondary to-mint hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
             >
               Iniciar sesión
             </motion.button>
@@ -171,7 +171,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right side - Feature highlight */}
-      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-primary/10 via-mint/10 to-secondary/10 relative overflow-hidden">
+      <div className="hidden lg:flex flex-1 bg-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
         
         {/* Animated orbs */}
@@ -181,7 +181,7 @@ export default function LoginPage() {
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-primary/30 to-mint/30 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ 
@@ -189,7 +189,7 @@ export default function LoginPage() {
             scale: [1, 1.2, 1]
           }}
           transition={{ duration: 15, repeat: Infinity }}
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-secondary/30 to-mint/30 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"
         />
 
         <div className="flex-1 flex items-center justify-center p-12 relative z-10">
@@ -216,7 +216,7 @@ export default function LoginPage() {
                     transition={{ delay: 0.3 + index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary to-mint flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
                       <span className="text-white text-xs">✓</span>
                     </div>
                     <span className="text-gray-700">{feature}</span>
@@ -241,7 +241,7 @@ export default function LoginPage() {
                     initial={{ width: 0 }}
                     animate={{ width: "85%" }}
                     transition={{ delay: 0.8, duration: 1 }}
-                    className="h-full bg-gradient-to-r from-primary to-mint"
+                    className="h-full bg-primary"
                   />
                 </div>
               </motion.div>
