@@ -14,78 +14,48 @@ export default function Home() {
       <NavbarNew />
       
       {/* Sección 1: Hero - Fondo blanco */}
-      <div className="bg-white">
+      <section className="bg-white">
         <Hero />
-      </div>
-      
-      {/* Divisor: Blanco → Azul */}
-      <WaveDivider 
-        type="wave1" 
-        color="#0066FF" 
-        className="-mt-20 relative z-10"
-        height={150}
-      />
+        <WaveDivider color="#0066FF" direction="down" />
+      </section>
       
       {/* Sección 2: Features - Fondo azul */}
-      <div className="bg-[#0066FF] -mt-1">
+      <section className="bg-[#0066FF] text-white">
         <Features />
-      </div>
+      </section>
       
-      {/* Divisor: Azul → Blanco */}
-      <WaveDivider 
-        type="wave2" 
-        color="#ffffff" 
-        className="-mt-1"
-        height={100}
-        flip
-      />
+      {/* Transición simétrica */}
+      <section className="bg-[#0066FF]">
+        <WaveDivider color="#0066FF" direction="up" />
+      </section>
       
       {/* Sección 3: Testimonials - Fondo blanco */}
-      <div className="bg-white -mt-1">
+      <section className="bg-white">
         <Testimonials />
-      </div>
-      
-      {/* Divisor: Blanco → Verde */}
-      <WaveDivider 
-        type="curve" 
-        color="#10B981" 
-        className="-mt-1"
-        height={80}
-      />
+        <WaveDivider color="#10B981" direction="down" />
+      </section>
       
       {/* Sección 4: Pricing - Fondo verde */}
-      <div className="bg-[#10B981] -mt-1">
+      <section className="bg-[#10B981] text-white">
         <Pricing />
-      </div>
+      </section>
       
-      {/* Divisor: Verde → Blanco */}
-      <WaveDivider 
-        type="wave1" 
-        color="#ffffff" 
-        className="-mt-1"
-        height={120}
-        flip
-      />
+      {/* Transición simétrica */}
+      <section className="bg-[#10B981]">
+        <WaveDivider color="#10B981" direction="up" />
+      </section>
       
       {/* Sección 5: PricingComparison - Fondo blanco */}
-      <div className="bg-white -mt-1">
+      <section className="bg-white">
         <PricingComparison />
-      </div>
+        <WaveDivider color="#00D4FF" direction="down" />
+      </section>
       
-      {/* Divisor final antes del CTA */}
-      <WaveDivider 
-        type="tilt" 
-        color="#00D4FF" 
-        className="-mt-1"
-        height={60}
-        animate
-      />
-      
-      {/* CTA y Footer - Fondo azul claro */}
-      <div className="bg-[#00D4FF] -mt-1">
+      {/* Sección 6: CTA y Footer - Fondo azul claro */}
+      <section className="bg-[#00D4FF]">
         <CTA />
         <Footer />
-      </div>
+      </section>
     </main>
   )
 }
