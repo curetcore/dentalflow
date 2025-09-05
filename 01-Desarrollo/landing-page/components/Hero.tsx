@@ -289,7 +289,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-    </div>
 
       {/* Demo Modal */}
       {showDemo && (
