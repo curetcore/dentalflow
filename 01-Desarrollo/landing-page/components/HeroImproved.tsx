@@ -3,11 +3,9 @@
 import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, Star, TrendingUp, Sparkles } from "lucide-react"
 import { useState } from "react"
-import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function HeroImproved() {
   const [email, setEmail] = useState("")
-  const { t } = useLanguage()
 
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-24 md:pt-28">
@@ -58,15 +56,15 @@ export default function HeroImproved() {
             >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                {t.hero.badge}
+                La IA que Elimina las Pérdidas por Citas Olvidadas
               </span>
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              {t.hero.title1}
+              Cada ausencia te cuesta
               <span className="relative inline-block mx-3">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-500 to-secondary">
-                  {t.hero.title2}
+                  $125
                 </span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-primary/20 via-cyan-500/20 to-secondary/20 blur-2xl"
@@ -74,11 +72,11 @@ export default function HeroImproved() {
                   transition={{ duration: 3, repeat: Infinity }}
                 />
               </span>
-              {t.hero.title3}
+              María las reduce un 73%
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              {t.hero.subtitle}
+              Las secretarias pierden 3 horas diarias confirmando citas. Los pacientes olvidan sus citas. Tu clínica pierde $7,500 al mes. María resuelve todo esto con automatización inteligente por WhatsApp.
             </p>
 
             {/* Stats with better animation */}
@@ -89,9 +87,9 @@ export default function HeroImproved() {
               className="grid grid-cols-3 gap-6 mb-10"
             >
               {[
-                { value: "50+", label: t.hero.stats.clinics },
-                { value: "93%", label: t.hero.stats.accuracy },
-                { value: "24/7", label: t.hero.stats.availability }
+                { value: "50+", label: "Clínicas Activas" },
+                { value: "93%", label: "Precisión" },
+                { value: "24/7", label: "Disponibilidad" }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -114,7 +112,7 @@ export default function HeroImproved() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder={t.hero.emailPlaceholder}
+                placeholder="Ingresa tu email corporativo"
                 className="flex-1 px-6 py-4 rounded-full border-2 border-gray-200 focus:outline-none focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all text-gray-800 placeholder-gray-400"
               />
               <motion.button
@@ -123,7 +121,7 @@ export default function HeroImproved() {
                 type="submit"
                 className="group bg-gradient-to-r from-primary via-cyan-500 to-secondary text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 relative overflow-hidden"
               >
-                <span className="relative z-10">{t.navbar.startTrial}</span>
+                <span className="relative z-10">Prueba Gratis</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary via-cyan-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.button>
@@ -132,9 +130,9 @@ export default function HeroImproved() {
             {/* Trust Signals */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-600">
               {[
-                { icon: CheckCircle, text: t.hero.trust.noCard },
-                { icon: CheckCircle, text: t.hero.trust.freeTrialDays },
-                { icon: CheckCircle, text: t.hero.trust.setupHours }
+                { icon: CheckCircle, text: "Sin tarjeta de crédito" },
+                { icon: CheckCircle, text: "14 días gratis" },
+                { icon: CheckCircle, text: "Setup en 24 horas" }
               ].map((item, index) => (
                 <motion.span
                   key={item.text}
@@ -173,7 +171,7 @@ export default function HeroImproved() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">María AI Dashboard</p>
-                      <p className="text-xs text-gray-500">Real-time Analytics</p>
+                      <p className="text-xs text-gray-500">Análisis en tiempo real</p>
                     </div>
                   </div>
                   <div className="flex gap-1">
@@ -187,19 +185,19 @@ export default function HeroImproved() {
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-gray-600">Today's Confirmations</span>
+                      <span className="text-sm text-gray-600">Confirmaciones Hoy</span>
                       <TrendingUp className="w-4 h-4 text-green-600" />
                     </div>
                     <p className="text-2xl font-bold text-gray-900">24/28</p>
-                    <p className="text-xs text-green-600 font-medium">+15% vs yesterday</p>
+                    <p className="text-xs text-green-600 font-medium">+15% vs ayer</p>
                   </div>
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-gray-600">AI Predictions</span>
+                      <span className="text-sm text-gray-600">Predicciones IA</span>
                       <Star className="w-4 h-4 text-blue-600" />
                     </div>
                     <p className="text-2xl font-bold text-gray-900">93%</p>
-                    <p className="text-xs text-blue-600 font-medium">Accuracy rate</p>
+                    <p className="text-xs text-blue-600 font-medium">Precisión</p>
                   </div>
                 </div>
 
@@ -232,7 +230,7 @@ export default function HeroImproved() {
                     <span className="text-white text-xs font-bold">AI</span>
                   </div>
                   <span className="font-semibold text-sm">María AI</span>
-                  <span className="ml-auto text-xs text-gray-400">now</span>
+                  <span className="ml-auto text-xs text-gray-400">ahora</span>
                 </div>
                 <div className="space-y-2">
                   <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3">
@@ -260,7 +258,7 @@ export default function HeroImproved() {
               >
                 <div className="text-center">
                   <p className="text-2xl font-bold text-green-600">-73%</p>
-                  <p className="text-xs text-gray-600">No-shows</p>
+                  <p className="text-xs text-gray-600">Ausencias</p>
                 </div>
               </motion.div>
             </div>

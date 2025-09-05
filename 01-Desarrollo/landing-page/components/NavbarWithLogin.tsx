@@ -2,16 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Globe, LogIn } from "lucide-react"
+import { Menu, X, LogIn } from "lucide-react"
 import LogoNew from "./LogoNew"
-import { useLanguage } from "@/contexts/LanguageContext"
 import Link from "next/link"
 
 export default function NavbarWithLogin() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [showLangMenu, setShowLangMenu] = useState(false)
-  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +19,10 @@ export default function NavbarWithLogin() {
   }, [])
 
   const navItems = [
-    { href: "#features", label: t.navbar.features },
-    { href: "#testimonials", label: t.navbar.testimonials },
-    { href: "#pricing", label: t.navbar.pricing },
-    { href: "#demo", label: t.navbar.demo },
+    { href: "#features", label: "Características" },
+    { href: "#testimonials", label: "Testimonios" },
+    { href: "#pricing", label: "Precios" },
+    { href: "#demo", label: "Demo" },
   ]
 
   return (
@@ -61,53 +58,6 @@ export default function NavbarWithLogin() {
                 {item.label}
               </motion.a>
             ))}
-            
-            {/* Language Selector */}
-            <div className="relative">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setShowLangMenu(!showLangMenu)}
-                className="flex items-center gap-2 text-gray-700 hover:text-primary font-medium transition-all"
-              >
-                <Globe className="w-5 h-5" />
-                {language.toUpperCase()}
-              </motion.button>
-              
-              <AnimatePresence>
-                {showLangMenu && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden"
-                  >
-                    <button
-                      onClick={() => {
-                        setLanguage('es')
-                        setShowLangMenu(false)
-                      }}
-                      className={`block w-full px-4 py-2 text-left hover:bg-gray-50 ${
-                        language === 'es' ? 'bg-primary/10 text-primary' : ''
-                      }`}
-                    >
-                      🇩🇴 Español
-                    </button>
-                    <button
-                      onClick={() => {
-                        setLanguage('en')
-                        setShowLangMenu(false)
-                      }}
-                      className={`block w-full px-4 py-2 text-left hover:bg-gray-50 ${
-                        language === 'en' ? 'bg-primary/10 text-primary' : ''
-                      }`}
-                    >
-                      🇺🇸 English
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
 
             {/* Divider */}
             <div className="h-8 w-px bg-gray-200" />
@@ -122,7 +72,7 @@ export default function NavbarWithLogin() {
               className="flex items-center gap-2 text-gray-700 hover:text-primary font-medium transition-all group"
             >
               <LogIn className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              {t.navbar.login}
+              Iniciar Sesión
             </motion.a>
             
             {/* CTA Button */}
@@ -133,7 +83,7 @@ export default function NavbarWithLogin() {
               whileTap={{ scale: 0.95 }}
               className="relative bg-gradient-to-r from-primary via-cyan-500 to-secondary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition-all overflow-hidden group"
             >
-              <span className="relative z-10">{t.navbar.startTrial}</span>
+              <span className="relative z-10">Prueba Gratis</span>
               <div className="absolute inset-0 bg-gradient-to-r from-secondary via-cyan-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </motion.button>
@@ -174,33 +124,6 @@ export default function NavbarWithLogin() {
                   {item.label}
                 </motion.a>
               ))}
-              
-              {/* Mobile Language Selector */}
-              <div className="py-3 space-y-2">
-                <p className="text-sm text-gray-500 font-medium">Idioma / Language</p>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setLanguage('es')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                      language === 'es' 
-                        ? 'bg-primary text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    🇩🇴 ES
-                  </button>
-                  <button
-                    onClick={() => setLanguage('en')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                      language === 'en' 
-                        ? 'bg-primary text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    🇺🇸 EN
-                  </button>
-                </div>
-              </div>
 
               {/* Divider */}
               <div className="border-t pt-4" />
@@ -211,12 +134,12 @@ export default function NavbarWithLogin() {
                 className="flex items-center justify-center gap-2 py-3 text-primary font-medium border border-primary rounded-full hover:bg-primary/5 transition-all"
               >
                 <LogIn className="w-5 h-5" />
-                {t.navbar.login}
+                Iniciar Sesión
               </a>
               
               {/* Mobile CTA */}
               <button className="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-4 rounded-full font-semibold shadow-lg">
-                {t.navbar.startTrial}
+                Prueba Gratis 14 Días
               </button>
             </div>
           </motion.div>

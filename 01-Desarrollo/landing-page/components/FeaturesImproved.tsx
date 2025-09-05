@@ -20,28 +20,25 @@ import {
   Target
 } from "lucide-react"
 import ImagePlaceholder from "./ImagePlaceholder"
-import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function FeaturesImproved() {
-  const { t, language } = useLanguage()
-
   const features = [
     {
       icon: Bot,
-      title: t.features.assistant.title,
-      description: t.features.assistant.description,
+      title: "Citas Olvidadas = Dinero Perdido",
+      description: "30% de pacientes olvidan sus citas. María envía recordatorios automáticos 24h y 3h antes. Resultado: -73% ausencias, +$7,500/mes recuperados.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Brain,
-      title: t.features.analytics.title,
-      description: t.features.analytics.description,
+      title: "Llamadas Perdidas = Pacientes Perdidos",
+      description: "Cada llamada sin responder es un paciente que va a la competencia. María responde automáticamente en WhatsApp con opción de agendar inmediata.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: TrendingUp,
-      title: t.features.revenue.title,
-      description: t.features.revenue.description,
+      title: "Secretarias Sobrecargadas = Errores Costosos",
+      description: "Tu equipo pierde 15 horas semanales en tareas repetitivas. María automatiza confirmaciones, cancelaciones y reprogramaciones. Más tiempo para atención de calidad.",
       gradient: "from-green-500 to-emerald-500"
     }
   ]
@@ -49,38 +46,38 @@ export default function FeaturesImproved() {
   const painPoints = [
     { 
       icon: Calendar, 
-      pain: language === 'es' ? "Agenda desordenada" : "Disorganized schedule",
-      solution: language === 'es' ? "Sincronización total" : "Full synchronization",
+      pain: "Agenda desordenada",
+      solution: "Sincronización total",
       gradient: "from-orange-400 to-red-400" 
     },
     { 
       icon: Star, 
-      pain: language === 'es' ? "Pocas reseñas online" : "Few online reviews",
-      solution: language === 'es' ? "Solicitud automática" : "Automatic requests",
+      pain: "Pocas reseñas online",
+      solution: "Solicitud automática",
       gradient: "from-yellow-400 to-amber-400" 
     },
     { 
       icon: Target, 
-      pain: language === 'es' ? "Leads sin seguimiento" : "Leads without follow-up",
-      solution: language === 'es' ? "CRM automatizado" : "Automated CRM",
+      pain: "Leads sin seguimiento",
+      solution: "CRM automatizado",
       gradient: "from-blue-400 to-indigo-400" 
     },
     { 
       icon: DollarSign, 
-      pain: language === 'es' ? "Cobranza tardía" : "Late collections",
-      solution: language === 'es' ? "Recordatorios de pago" : "Payment reminders",
+      pain: "Cobranza tardía",
+      solution: "Recordatorios de pago",
       gradient: "from-green-400 to-emerald-400" 
     },
     { 
       icon: BarChart, 
-      pain: language === 'es' ? "Sin métricas claras" : "No clear metrics",
-      solution: language === 'es' ? "Dashboard ejecutivo" : "Executive dashboard",
+      pain: "Sin métricas claras",
+      solution: "Dashboard ejecutivo",
       gradient: "from-purple-400 to-pink-400" 
     },
     { 
       icon: AlertCircle, 
-      pain: language === 'es' ? "Errores manuales" : "Manual errors",
-      solution: language === 'es' ? "Flujos automáticos" : "Automated flows",
+      pain: "Errores manuales",
+      solution: "Flujos automáticos",
       gradient: "from-red-400 to-rose-400" 
     }
   ]
@@ -103,17 +100,17 @@ export default function FeaturesImproved() {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-secondary/10 px-4 py-2 rounded-full mb-4"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-gray-700">Features</span>
+            <span className="text-sm font-semibold text-gray-700">Soluciones</span>
           </motion.div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            {t.features.title1}
+            Los Problemas que Cuestan Dinero
             <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-500 to-secondary"> 
-              {t.features.title2}
+              Y Cómo los Resolvemos
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            {t.features.subtitle}
+            Cada problema no resuelto significa pérdidas. Identificamos los 12 principales dolores de las clínicas dentales y creamos soluciones automáticas para cada uno.
           </p>
         </motion.div>
 
@@ -147,9 +144,13 @@ export default function FeaturesImproved() {
                     className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
                     whileHover={{ y: -5, shadow: "xl" }}
                   >
-                    <h4 className="font-semibold mb-4 text-gray-900">{t.features.howItWorks}</h4>
+                    <h4 className="font-semibold mb-4 text-gray-900">Cómo funciona:</h4>
                     <div className="space-y-4">
-                      {[t.features.step1, t.features.step2, t.features.step3].map((step, stepIndex) => (
+                      {[
+                        "Se integra perfectamente con tus sistemas existentes",
+                        "Se activa automáticamente en momentos óptimos",
+                        "Aprende y mejora continuamente su rendimiento"
+                      ].map((step, stepIndex) => (
                         <motion.div 
                           key={stepIndex}
                           initial={{ opacity: 0, x: -20 }}
@@ -194,7 +195,7 @@ export default function FeaturesImproved() {
                         </div>
                         <div>
                           <p className="text-2xl font-bold text-gray-900">+40%</p>
-                          <p className="text-xs text-gray-600">Efficiency</p>
+                          <p className="text-xs text-gray-600">Eficiencia</p>
                         </div>
                       </div>
                     </motion.div>
@@ -221,7 +222,7 @@ export default function FeaturesImproved() {
           
           <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
-              {language === 'es' ? 'Más Problemas que Resolvemos Automáticamente' : 'More Problems We Solve Automatically'}
+              Más Problemas que Resolvemos Automáticamente
             </h3>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Star, Quote, ArrowLeft, ArrowRight } from "lucide-react"
 import { useState } from "react"
-import { useLanguage } from "@/contexts/LanguageContext"
 
 const testimonials = [
   {
@@ -12,17 +11,13 @@ const testimonials = [
     role: "Propietaria",
     clinic: "SmileCare Dental",
     location: "Santo Domingo, RD",
-    image: null,
     initials: "SR",
     rating: 5,
-    quote: {
-      es: "DentalFlow AI transformó completamente nuestra práctica. Pasamos de 30% de ausencias a menos del 8%. El ROI fue inmediato - recuperamos la inversión en solo 3 semanas.",
-      en: "DentalFlow AI completely transformed our practice. We went from 30% no-shows to less than 8%. The ROI was immediate - we recovered the investment in just 3 weeks."
-    },
+    quote: "DentalFlow AI transformó completamente nuestra práctica. Pasamos de 30% de ausencias a menos del 8%. El ROI fue inmediato - recuperamos la inversión en solo 3 semanas.",
     metrics: {
-      metric: { es: "Incremento de Ingresos", en: "Revenue Increase" },
+      metric: "Incremento de Ingresos",
       value: "+42%",
-      period: { es: "en 2 meses", en: "in 2 months" }
+      period: "en 2 meses"
     }
   },
   {
@@ -31,17 +26,13 @@ const testimonials = [
     role: "Director Clínico",
     clinic: "Advanced Dental Group",
     location: "Santiago, RD",
-    image: null,
     initials: "MP",
     rating: 5,
-    quote: {
-      es: "Las predicciones de IA son increíblemente precisas. María sabe qué pacientes probablemente faltarán y ajusta su enfoque en consecuencia. Es como tener un miembro del equipo que nunca olvida.",
-      en: "The AI predictions are incredibly accurate. Maria knows which patients are likely to miss appointments and adjusts her approach accordingly. It's like having a team member who never forgets."
-    },
+    quote: "Las predicciones de IA son increíblemente precisas. María sabe qué pacientes probablemente faltarán y ajusta su enfoque en consecuencia. Es como tener un miembro del equipo que nunca olvida.",
     metrics: {
-      metric: { es: "Reducción de Ausencias", en: "No-show Reduction" },
+      metric: "Reducción de Ausencias",
       value: "-73%",
-      period: { es: "en 6 semanas", en: "in 6 weeks" }
+      period: "en 6 semanas"
     }
   },
   {
@@ -50,23 +41,18 @@ const testimonials = [
     role: "Gerente de Práctica",
     clinic: "Family Dental Care",
     location: "La Romana, RD",
-    image: null,
     initials: "AM",
     rating: 5,
-    quote: {
-      es: "¡Nuestros pacientes aman a María! Dicen que es amigable y siempre responde rápidamente. Algunos incluso comparten historias personales con ella. Realmente es parte de nuestro equipo ahora.",
-      en: "Our patients love Maria! They say she's friendly and always responds quickly. Some even share personal stories with her. She's truly part of our team now."
-    },
+    quote: "¡Nuestros pacientes aman a María! Dicen que es amigable y siempre responde rápidamente. Algunos incluso comparten historias personales con ella. Realmente es parte de nuestro equipo ahora.",
     metrics: {
-      metric: { es: "Satisfacción del Paciente", en: "Patient Satisfaction" },
+      metric: "Satisfacción del Paciente",
       value: "4.9★",
-      period: { es: "calificación constante", en: "consistent rating" }
+      period: "calificación constante"
     }
   }
 ]
 
 export default function TestimonialsNew() {
-  const { language, t } = useLanguage()
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextTestimonial = () => {
@@ -89,11 +75,11 @@ export default function TestimonialsNew() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            {t.testimonials.title1}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"> {t.testimonials.title2}</span>
+            Confiado por
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"> Clínicas Dentales Líderes</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            {t.testimonials.subtitle}
+            Únete a miles de dentistas que han transformado su práctica con IA
           </p>
         </motion.div>
 
@@ -107,19 +93,19 @@ export default function TestimonialsNew() {
         >
           <div className="bg-gray-50 rounded-2xl p-6">
             <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">2,500+</p>
-            <p className="text-sm md:text-base text-gray-600">{t.testimonials.stats.activeClinics}</p>
+            <p className="text-sm md:text-base text-gray-600">Clínicas Activas</p>
           </div>
           <div className="bg-gray-50 rounded-2xl p-6">
             <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">1.5M+</p>
-            <p className="text-sm md:text-base text-gray-600">{t.testimonials.stats.appointments}</p>
+            <p className="text-sm md:text-base text-gray-600">Citas Gestionadas</p>
           </div>
           <div className="bg-gray-50 rounded-2xl p-6">
-            <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">RD$8.2M</p>
-            <p className="text-sm md:text-base text-gray-600">{t.testimonials.stats.revenue}</p>
+            <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">$8.2M</p>
+            <p className="text-sm md:text-base text-gray-600">Ingresos Recuperados</p>
           </div>
           <div className="bg-gray-50 rounded-2xl p-6">
             <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">4.9★</p>
-            <p className="text-sm md:text-base text-gray-600">{t.testimonials.stats.rating}</p>
+            <p className="text-sm md:text-base text-gray-600">Calificación Promedio</p>
           </div>
         </motion.div>
 
@@ -143,7 +129,7 @@ export default function TestimonialsNew() {
               transition={{ duration: 0.3 }}
             >
               <p className="text-lg md:text-xl text-gray-700 italic mb-8 leading-relaxed">
-                "{testimonials[currentIndex].quote[language]}"
+                "{testimonials[currentIndex].quote}"
               </p>
               
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -165,8 +151,8 @@ export default function TestimonialsNew() {
                 
                 <div className="bg-gradient-to-r from-primary to-secondary p-4 rounded-xl text-white text-center">
                   <p className="text-3xl font-bold">{testimonials[currentIndex].metrics.value}</p>
-                  <p className="text-xs">{testimonials[currentIndex].metrics.metric[language]}</p>
-                  <p className="text-xs opacity-80">{testimonials[currentIndex].metrics.period[language]}</p>
+                  <p className="text-xs">{testimonials[currentIndex].metrics.metric}</p>
+                  <p className="text-xs opacity-80">{testimonials[currentIndex].metrics.period}</p>
                 </div>
               </div>
             </motion.div>
@@ -210,7 +196,7 @@ export default function TestimonialsNew() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-16 text-center"
         >
-          <p className="text-sm text-gray-600 mb-8">{language === 'es' ? 'Confiado por líderes de la industria' : 'Trusted by industry leaders'}</p>
+          <p className="text-sm text-gray-600 mb-8">Confiado por líderes de la industria</p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             {[...Array(5)].map((_, i) => (
               <div key={i} className="w-32 h-12 bg-gray-200 rounded animate-pulse" />

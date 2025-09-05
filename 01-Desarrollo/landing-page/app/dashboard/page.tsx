@@ -5,14 +5,12 @@ import { motion } from "framer-motion"
 import { Mail, Lock, Eye, EyeOff, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import LogoNew from "@/components/LogoNew"
-import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [rememberMe, setRememberMe] = useState(false)
-  const { language, setLanguage, t } = useLanguage()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -35,7 +33,7 @@ export default function LoginPage() {
             className="inline-flex items-center gap-2 text-gray-600 hover:text-primary transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            {language === 'es' ? 'Volver al inicio' : 'Back to home'}
+            Volver al inicio
           </Link>
 
           {/* Logo */}
@@ -46,12 +44,10 @@ export default function LoginPage() {
           {/* Header */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900">
-              {language === 'es' ? 'Bienvenido de vuelta' : 'Welcome back'}
+              Bienvenido de vuelta
             </h2>
             <p className="mt-2 text-gray-600">
-              {language === 'es' 
-                ? 'Ingresa a tu dashboard para gestionar tu clínica' 
-                : 'Sign in to your dashboard to manage your clinic'}
+              Ingresa a tu dashboard para gestionar tu clínica
             </p>
           </div>
 
@@ -61,7 +57,7 @@ export default function LoginPage() {
               {/* Email field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  {language === 'es' ? 'Correo electrónico' : 'Email address'}
+                  Correo electrónico
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -76,7 +72,7 @@ export default function LoginPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                    placeholder={language === 'es' ? 'tu@clinica.com' : 'your@clinic.com'}
+                    placeholder="tu@clinica.com"
                   />
                 </div>
               </div>
@@ -84,7 +80,7 @@ export default function LoginPage() {
               {/* Password field */}
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                  {language === 'es' ? 'Contraseña' : 'Password'}
+                  Contraseña
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -128,12 +124,12 @@ export default function LoginPage() {
                   className="h-4 w-4 text-primary focus:ring-primary/20 border-gray-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
-                  {language === 'es' ? 'Recordarme' : 'Remember me'}
+                  Recordarme
                 </label>
               </div>
 
               <Link href="/forgot-password" className="text-sm text-primary hover:text-primary/80">
-                {language === 'es' ? '¿Olvidaste tu contraseña?' : 'Forgot password?'}
+                ¿Olvidaste tu contraseña?
               </Link>
             </div>
 
@@ -144,17 +140,17 @@ export default function LoginPage() {
               whileTap={{ scale: 0.98 }}
               className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-xl text-white bg-gradient-to-r from-primary via-cyan-500 to-secondary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
             >
-              {language === 'es' ? 'Iniciar sesión' : 'Sign in'}
+              Iniciar sesión
             </motion.button>
           </form>
 
           {/* Sign up link */}
           <div className="text-center">
             <span className="text-gray-600">
-              {language === 'es' ? '¿No tienes cuenta?' : "Don't have an account?"}
+              ¿No tienes cuenta?
             </span>{' '}
             <Link href="/" className="font-medium text-primary hover:text-primary/80">
-              {language === 'es' ? 'Prueba gratis 14 días' : 'Start free trial'}
+              Prueba gratis 14 días
             </Link>
           </div>
 
@@ -166,7 +162,7 @@ export default function LoginPage() {
             className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm"
           >
             <p className="font-medium text-primary mb-1">
-              {language === 'es' ? 'Credenciales de demo:' : 'Demo credentials:'}
+              Credenciales de demo:
             </p>
             <p className="text-gray-600">Email: demo@dentalflow.ai</p>
             <p className="text-gray-600">Password: demo123</p>
@@ -204,16 +200,14 @@ export default function LoginPage() {
               transition={{ delay: 0.2 }}
             >
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {language === 'es' 
-                  ? 'Gestiona tu clínica dental con IA' 
-                  : 'Manage your dental clinic with AI'}
+                Gestiona tu clínica dental con IA
               </h3>
               <ul className="space-y-4">
                 {[
-                  language === 'es' ? 'Dashboard en tiempo real' : 'Real-time dashboard',
-                  language === 'es' ? 'Predicciones de IA precisas' : 'Accurate AI predictions',
-                  language === 'es' ? 'Comunicación automatizada' : 'Automated communication',
-                  language === 'es' ? 'Análisis de rendimiento' : 'Performance analytics'
+                  'Dashboard en tiempo real',
+                  'Predicciones de IA precisas',
+                  'Comunicación automatizada',
+                  'Análisis de rendimiento'
                 ].map((feature, index) => (
                   <motion.li
                     key={feature}
@@ -238,7 +232,7 @@ export default function LoginPage() {
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-gray-600">
-                    {language === 'es' ? 'Clínicas activas' : 'Active clinics'}
+                    Clínicas activas
                   </span>
                   <span className="text-2xl font-bold text-primary">2,500+</span>
                 </div>
