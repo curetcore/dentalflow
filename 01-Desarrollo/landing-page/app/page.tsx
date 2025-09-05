@@ -10,60 +10,49 @@ import WaveDivider from '@/components/WaveDivider'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <NavbarNew />
       
-      {/* Hero - Fondo azul primario */}
-      <section className="bg-[#0066FF]">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-blue-50 to-blue-500 pb-0">
         <Hero />
       </section>
       
-      {/* Divisor azul → blanco */}
-      <WaveDivider fromColor="#0066FF" />
-      
-      {/* Features - Fondo blanco */}
-      <section className="bg-white">
+      {/* Features */}
+      <section className="bg-white pt-0">
+        <WaveDivider className="text-blue-500 -mb-1" />
         <Features />
       </section>
       
-      {/* Divisor blanco → cyan suave */}
-      <WaveDivider fromColor="#FFFFFF" />
-      
-      {/* Benefits/Testimonials - Fondo cyan claro */}
-      <section className="bg-[#E0F2FE]">
+      {/* Testimonials/Metrics */}
+      <section className="bg-gray-50 pt-0">
+        <WaveDivider className="text-white -mb-1" />
         <Testimonials />
       </section>
       
-      {/* Divisor cyan → blanco */}
-      <WaveDivider fromColor="#E0F2FE" />
-      
-      {/* Pricing - Fondo blanco */}
-      <section className="bg-white">
+      {/* Pricing */}
+      <section className="bg-white pt-0">
+        <WaveDivider className="text-gray-50 -mb-1" />
         <Pricing />
       </section>
       
-      {/* Divisor blanco → verde suave */}
-      <WaveDivider fromColor="#FFFFFF" />
-      
-      {/* PricingComparison - Fondo verde suave */}
-      <section className="bg-[#ECFDF5]">
+      {/* Pricing Comparison */}
+      <section className="bg-white">
         <PricingComparison />
       </section>
       
-      {/* Divisor verde → blanco */}
-      <WaveDivider fromColor="#ECFDF5" />
-      
-      {/* CTA Final - Fondo blanco */}
-      <section className="bg-white">
+      {/* CTA Final */}
+      <section className="bg-blue-500 pt-0">
+        <WaveDivider className="text-white -mb-1" />
         <CTA />
       </section>
       
-      {/* Divisor blanco → azul oscuro */}
-      <WaveDivider fromColor="#FFFFFF" />
-      
-      {/* Footer - Fondo azul oscuro */}
-      <section className="bg-[#003D99]">
-        <Footer />
+      {/* Footer */}
+      <section className="bg-gray-900 pt-0">
+        <WaveDivider className="text-blue-500 -mb-1" />
+        <div className="text-white">
+          <Footer />
+        </div>
       </section>
     </main>
   )
