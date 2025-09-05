@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Providers } from './providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'María AI - Tu Asistente Dental Inteligente | DentalFlow AI',
-  description: 'Reduce ausencias 73% y llena tu agenda automáticamente. María AI confirma citas 24/7 por WhatsApp para clínicas dentales en República Dominicana.',
-  keywords: 'asistente dental, IA dental, confirmación citas, clínicas dentales RD, reducir ausencias',
+  description: 'Reduce ausencias 73% y llena tu agenda automáticamente. María AI confirma citas 24/7 por WhatsApp para clínicas dentales.',
+  keywords: 'asistente dental, IA dental, confirmación citas, clínicas dentales, reducir ausencias, dental AI, appointment confirmation',
   openGraph: {
     title: 'María AI - Tu Asistente Dental Inteligente',
     description: 'Reduce ausencias 73% y llena tu agenda automáticamente',
@@ -25,7 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

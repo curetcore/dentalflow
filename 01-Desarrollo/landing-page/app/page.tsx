@@ -1,6 +1,6 @@
-import Navbar from '@/components/Navbar'
-import HeroNew from '@/components/HeroNew'
-import FeaturesNew from '@/components/FeaturesNew'
+import NavbarNew from '@/components/NavbarNew'
+import HeroImproved from '@/components/HeroImproved'
+import FeaturesImproved from '@/components/FeaturesImproved'
 import TestimonialsNew from '@/components/TestimonialsNew'
 import Pricing from '@/components/Pricing'
 import CTA from '@/components/CTA'
@@ -9,9 +9,9 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Navbar />
-      <HeroNew />
-      <FeaturesNew />
+      <NavbarNew />
+      <HeroImproved />
+      <FeaturesImproved />
       <TestimonialsNew />
       <Pricing />
       <CTA />
